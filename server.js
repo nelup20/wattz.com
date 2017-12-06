@@ -1,13 +1,16 @@
 const express = require("express"),
       app = express(),
-      bodyParser = require("body-parser");
+      bodyParser = require("body-parser"),
+      ejs = require("ejs"),
+      path = require("path");
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.set("view engine", "html");
-app.use(express.static("src/assets"))
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "views/assets")));
+
 
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/src/index.html");
+    res.render("index");
 });
 
 
