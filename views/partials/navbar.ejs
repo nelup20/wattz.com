@@ -41,7 +41,8 @@
                     <form class="navbar-form">
                             <div class="form-group">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>   
-                                    <input type="text" id="searchInput">                                 
+                                    <input type="text" id="searchInput">
+                                    <button>Search</button>                                 
                              </div>
                      </form>
                 </li>
@@ -53,6 +54,9 @@
       <style>
           .navbar{
               background-color: rgb(17, 55, 100);
+              margin: 0;
+              border: 0;
+              border-radius: 0;
           }
           #bs-example-navbar-collapse-1 ul li a{
               color: white;
@@ -65,11 +69,11 @@
           }
           button.navbar-toggle{
             border-radius: 50%;
-             height: 9vh;
+             height: 14vw;
           }
           button.navbar-toggle.collapsed{
             border-radius: 50%;
-             height: 9vh;
+             height: 14vw;
           }
         .glyphicon.glyphicon-search{
             color: white;
@@ -80,7 +84,7 @@
             margin-left: 5%;
             background: none;
             border: none;
-            border-bottom: none;
+            border-bottom: 0px solid white;
             width: 0;
             transition: all 1s;
             color: white;
@@ -89,14 +93,33 @@
             border: none;
             box-shadow: none;
         }
+        form.navbar-form button{
+            color: white;
+            opacity: 0;
+            transition: all 2s;
+            background: none;
+            border: none;
+        }
       </style>
 
       <script>
+          let toggled = false;
           $(".glyphicon.glyphicon-search").click(function(){
+            toggled = !toggled;
+            if(!toggled){
               $("#searchInput").css({
                   width: "50%",
                   borderBottom: "1px  solid white"
               });
-              $(this).css("color", "limegreen")
-          })
+              $(".glyphicon.glyphicon-search").css("color", "limegreen");
+              $("form.navbar-form button").css("opacity", "1");
+            } else {
+              $("#searchInput").css({
+                  width: "0%",
+                  borderBottom: "0px solid white"
+              });
+              $(".glyphicon.glyphicon-search").css("color", "white");
+              $("form.navbar-form button").css("opacity", "0");
+            }
+          });
       </script>

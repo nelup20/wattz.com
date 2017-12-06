@@ -6,6 +6,92 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <%- include('partials/navbar') %>
-
+        <div class="indexBulbs">
+            <h2>Lorem Ipsum</h2>
+            <h3>Lorem Ipsum sit dolor</h3>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                <img src="/images/bulbDrawing.png" alt="" class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-8" id="aboutWattz">
+                    <h4>About Wattz</h4>
+                    <h3>Transcending regular energy</h3>
+                    <div>
+                            Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                    </div>
+                    <button class="btn btn-default">Discover</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="ourInvestments">
+            <div class="">
+                <div class="row container">
+                    <div class="col-xs-12 col-md-6" id="ourInvestmentsPart">
+                            <h4>Our Investments</h4>
+                            <h3>Made possible with Wattz</h3>
+                            <div>
+                                    Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                            </div>
+                            <div>
+                                    Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada.
+                            </div>
+                            <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            </button>
+                    </div>
+                        <img src="/images/handShake1.jpg" alt="" class="col-xs-12 col-md-6" id="handShakeImg">
+                </div>
+            </div>
+        </div>
 </body>
+<style>
+    .indexBulbs{
+        background-image: url("/images/IndexBulbs.jpg");
+        height: 150vw;
+        background-size: cover;
+        color: white;
+        padding-top: 50vw;
+        
+    }
+    .indexBulbs h2{
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 300;
+    }
+    .indexBulbs h3{
+        margin: 3vw auto;
+        text-align: center;
+    }
+    #aboutWattz{
+        color: rgb(97, 97, 97)
+    }
+    #aboutWattz div{
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+    }
+    #aboutWattz button{
+        background-color: rgb(17, 55, 100);
+        color: white;
+    }
+    #ourInvestments{
+        background-color: #F8F8F8;
+        color: rgb(97, 97, 97)
+    }
+    #ourInvestments div{
+        margin-top: 10vw;
+        margin-bottom: 0
+    }
+    #ourInvestments button{
+        background-color: rgb(17, 55, 100);
+        color: white;
+        margin-top: 10vw
+    }
+    #handShakeImg{
+        padding: initial
+    }
+    #ourInvestmentsPart{
+        background-color: white;
+    }
+</style>
 </html>
