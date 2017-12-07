@@ -26,8 +26,8 @@
             </div>
         </div>
         <div id="ourInvestments">
-            <div class="">
-                <div class="row container">
+            <div class="container">
+                <div class="row">
                     <div class="col-xs-12 col-md-6" id="ourInvestmentsPart">
                             <h4>Our Investments</h4>
                             <h3>Made possible with Wattz</h3>
@@ -42,6 +42,31 @@
                     </div>
                         <img src="/images/handShake1.jpg" alt="" class="col-xs-12 col-md-6" id="handShakeImg">
                 </div>
+            </div>
+        </div>
+        <div id="emailPart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                            <div class="emailReason">Fault notice</div>                            
+                    </div>
+                    <div class="col-xs-4">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                            <div class="emailReason">Leak notice</div>                               
+                    </div>
+                    <div class="col-xs-4">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                            <div class="emailReason">Other complaints</div>                               
+                    </div>
+                </div>
+                <form action="/email" class="row" method="POST">
+                <input type="text" placeholder="Name" class="col-xs-12 col-md-4">
+                <input type="email" placeholder="email" class="col-xs-12 col-md-4">
+                <input type="text" placeholder="Subject" class="col-xs-12 col-md-4">
+                <textarea name="message" id="" cols="30" rows="5" class="col-xs-12 col-md-12"> Message</textarea>
+                <button id="sendBtn">Send</button>
+                </form>
             </div>
         </div>
 </body>
@@ -85,13 +110,58 @@
     #ourInvestments button{
         background-color: rgb(17, 55, 100);
         color: white;
-        margin-top: 10vw
+        margin-top: 10vw;
+        margin-bottom: 10vw
     }
     #handShakeImg{
-        padding: initial
+        padding: initial;
+        margin-bottom: 20vw;
     }
     #ourInvestmentsPart{
         background-color: white;
+    }
+    #emailPart{
+        background-color: rgb(17, 55, 100);
+        padding-top: 5vw;
+    }
+   input.col-xs-12.col-md-4{
+        background: none;
+        margin-bottom: 4vw;
+        border: 1px  solid white;
+        padding: 2.5vw;
+        padding-left: 7vw;
+        color: white;
+    }
+    ::-webkit-input-placeholder{
+        color: white;
+    }
+    textarea.col-xs-12.col-md-12{
+        background: none;
+        border: 1px  solid white;
+        padding: 2.5vw;
+        padding-left: 6vw;
+        color: rgb(109, 109, 109);
+        color: white;
+    }
+    span.glyphicon.glyphicon-bell{
+        color: white;
+        font-size: 7vw;
+        margin-left: 8vw
+    }
+    .emailReason{
+        color: white;
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 4vw;
+    }
+    #sendBtn{
+        color: rgb(17, 55, 100);
+        background-color: white;
+        border: 1px solid white;
+        margin: 5vw 39vw;
+        font-size: 6vw;
+        text-align: center;
+        border-radius: 1.3vw
     }
 </style>
 </html>
