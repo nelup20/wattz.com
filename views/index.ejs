@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">    
     <%- include('partials/navbar') %>
         <div class="indexBulbs">
             <h2>Lorem Ipsum</h2>
@@ -13,7 +14,7 @@
         <div>
             <div class="container">
                 <div class="row">
-                <img src="/images/bulbDrawing.png" alt="" class="col-xs-12 col-md-4">
+                <img src="/images/bulbDrawing.png" alt="" class="col-xs-12 col-md-4" id="aboutWattzCartoon">
                 <div class="col-xs-12 col-md-8" id="aboutWattz">
                     <h4>About Wattz</h4>
                     <h3>Transcending regular energy</h3>
@@ -39,6 +40,9 @@
                             </div>
                             <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             </button>
+                            <div id="investmentLastElem">
+                                    <i class="fa fa-circle activeCircle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>    
+                                </div>
                     </div>
                         <img src="/images/handShake1.jpg" alt="" class="col-xs-12 col-md-6" id="handShakeImg">
                 </div>
@@ -97,18 +101,26 @@
                                 <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button><span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
                             </div>
                             <div id="interruptionLastElem">
-                                <i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>    
+                                <i class="fa fa-circle activeCircle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>    
                             </div>
                         </div>  
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="feelEnergyPart">
+                <h1>Feel</h1>
+                <h3>the energy</h3>
+            </div>
+            <iframe
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfCb7uT9jdmZZfVZFSoioendS-KXtEfDU
+              &q=Somewhere" allowfullscreen>
+          </iframe>
+        
 </body>
+
 <style>
-    body{
-        background-color: rgba(206, 204, 204, 0.192);
-    }
+   
     .indexBulbs{
         background-image: url("/images/IndexBulbs.jpg");
         height: 150vw;
@@ -148,13 +160,24 @@
     }
     #ourInvestmentsPart div{
         margin-top: 10vw;
-        margin-bottom: 0
+        margin-bottom: 0;
+    }
+    #investmentLastElem{
+        text-align: center;
+        color: rgba(206, 204, 204, 0.466);
+        margin-top: 0vw;
+        padding-bottom: 3vw;
+
+       
+    }
+    #investmentLastElem i{
+        margin-left: 3vw;
     }
     #ourInvestments button{
         background-color: rgb(17, 55, 100);
         color: white;
         margin-top: 10vw;
-        margin-bottom: 10vw
+        margin-bottom: 0vw
     }
     #handShakeImg{
         padding: initial;
@@ -221,8 +244,8 @@
         
     }
     #newsAndInterruptions{
-        background-color: rgba(206, 204, 204, 0.192);
-        margin-top: 15vw;
+        background-color: rgba(206, 204, 204, 0.473);
+        
     }
     #newsAndInterruptions div.row{
         background-color: rgba(206, 204, 204, 0.192);
@@ -237,7 +260,7 @@
     #newsPart button.btn.btn-default{
         background-color: rgb(17, 55, 100);
         color: white;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     #newsPart div{
         border-top: 1px solid rgba(0, 0, 0, 0.185);
@@ -260,7 +283,7 @@
     #interruptionPart button.btn.btn-default{
         background-color: rgb(17, 55, 100);
         color: white;
-        font-size: 2vw;
+        font-size: 3vw;
     }
     #interruptionPart div{
         border-top: 1px solid rgba(0, 0, 0, 0.185);
@@ -270,7 +293,28 @@
     }
     #interruptionLastElem{
         text-align: center;
-        color: rgba(206, 204, 204, 0.192);
+        color: rgba(206, 204, 204, 0.466);
+       
+    }
+    #interruptionLastElem i{
+        margin-left: 3vw;
+    }
+    .activeCircle{
+        color: rgb(17, 55, 100);
+    }
+    #feelEnergyPart{
+        color: white;
+        background-color: #C23833;
+        text-align: center;
+        padding: 6vw;
+        font-family: 'Pacifico', cursive;
+    }
+    #feelEnergyPart h3{
+        margin-top: 0
+    }
+    iframe{
+        width: 100vw;
+        height: 100vw;
     }
 </style>
 </html>
