@@ -190,3 +190,10 @@ iframe {
   height: 100vw;
   border: none;
 }
+@media (min-width: 768px){
+  .indexBulbs {
+    height: 100vw;
+    padding-top: 45vw
+  }
+  
+}
