@@ -17,7 +17,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#"></a>
         </a>
       </div>
 
@@ -44,7 +44,7 @@
             <a href="">Contact Us</a>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer Service
+            <a href="#" class="dropdown-toggle" id="dropdownToggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer Service
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
@@ -140,21 +140,79 @@
       border: none;
     }
 
-    @media (min-width: 740px) {
+    #dropdownToggle {
+      background-color: rgb(17, 55, 100);
+    }
+
+    ul.dropdown-menu {
+      background-color: rgb(17, 55, 100);
+    }
+
+    ul.dropdown-menu li a:hover {
+      background-color: rgb(17, 55, 100);
+    }
+
+    @media (min-width: 570px) {
+
+      form.navbar-form {
+        width: 70vw;
+        
+      }
+      button.navbar-toggle {
+        height: 12vw;
+      }
+      button.navbar-toggle.collapsed {
+        height: 12vw;
+      }
       .navbar-brand {
-        transform: translateY(-1.3vw);
-        height: 6vw;
-        width: 9vw;
+        width: 20vw;
+        height: 15vw;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar{
+        height: 0vw;
+      }
+      .container{
+        width:  100vw
+      }
+      form.navbar-form {
+        width: 25vw;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5px
       }
       form.navbar-form button {
-        font-size: 1.3vw;
+        font-size: 1.1vw
       }
-      .nav.navbar-nav li a {
-        font-size: 1.2vw;
-        margin-left: 1.3vw
+      .navbar-brand {
+        width: 7vw;
+        height: 8vw;
+      }
+      .navbar.navbar-default li a {
+        font-size: 1.1vw
+      }
+      #navBarRightSide {
+        float: none!important
+      }
+    }
+    @media (min-width: 1000px) {
+      .navbar{
+        height: 6vw
+      }
+      .container{
+        width: 850px;
+      }
+      .navbar-brand {
+        width: 7vw;
+        height: 8vw;
       }
       form.navbar-form {
         width: 20vw;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5px
       }
     }
   </style>
