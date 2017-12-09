@@ -3,147 +3,180 @@
 <script src="/js/bootstrap.min.js"></script>
 <title>Wattz</title>
 </head>
+
 <body>
-<nav class="navbar navbar-default">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-                
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#">About Us
+              <span class="sr-only">(current)</span>
             </a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="#">About Us <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Career</a></li>
-              <li><a href="#">Information Center</a></li>
-              <li><a href="#">News</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" id="navBarRightSide">
-              <li><a href="">Contact Us</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer Service <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Submit a ticket</a></li>
-                  <li><a href="#">Ticket status</a></li>
-                </ul>
+          </li>
+          <li>
+            <a href="#">Career</a>
+          </li>
+          <li>
+            <a href="#">Information Center</a>
+          </li>
+          <li>
+            <a href="#">News</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" id="navBarRightSide">
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer Service
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">FAQ</a>
               </li>
               <li>
-                    <form class="navbar-form">
-                            <div class="form-group">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>   
-                                    <input type="text" id="searchInput">
-                                    <button>Search</button>                                 
-                             </div>
-                     </form>
-                </li>
+                <a href="#">Submit a ticket</a>
+              </li>
+              <li>
+                <a href="#">Ticket status</a>
+              </li>
             </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+          </li>
+          <li>
+            <form class="navbar-form">
+              <div class="form-group">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <input type="text" id="searchInput">
+                <button>Search</button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
 
-      <style>
-    
-    body{
-        overflow-x: hidden; 
-        }
-          .navbar{
-              background-color: rgb(17, 55, 100);
-              margin: 0;
-              border: 0;
-              border-radius: 0;
-          }
-          #bs-example-navbar-collapse-1 ul li a{
-              color: white;
-          }
-          .navbar-brand{
-            background-image: url("/images/Brand.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 25vw;
-            height: 20vw;
-          }
-          button.navbar-toggle{
-            border-radius: 50%;
-             height: 14vw;
-             padding: 4vw
-          }
-          button.navbar-toggle.collapsed{
-            border-radius: 50%;
-             height: 14vw;
-             padding: 4vw
-          }
-        .glyphicon.glyphicon-search{
-            color: white;
-            left: 5%;
-            transition: all 1s;
-        }
-        #searchInput{
-            margin-left: 5%;
-            background: none;
-            border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0);
-            width: 1%;
-            transition: all 1s;
-            color: white;
-        }
-        form.navbar-form{
-            border: none;
-            box-shadow: none;
-        }
-        form.navbar-form button{
-            color: white;
-            opacity: 0;
-            transition: all 2s;
-            background: none;
-            border: none;
-        }
-        @media (min-width: 740px){
-          .navbar-brand{
-            transform: translateY(-1.3vw);
-            height: 6vw;
-            width: 9vw;
-          }
-          form.navbar-form button{
-            font-size: 1.3vw;
-          }
-        .nav.navbar-nav li a{
-          font-size: 1.2vw;
-          margin-left: 1.3vw
-        }
-        form.navbar-form{
-          width: 20vw;
-        }
-        }
-      </style>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
 
-      <script>
-          let toggled = false;
-          $(".glyphicon.glyphicon-search").click(function(){
-            toggled = !toggled;
-            if(toggled){
-              $("#searchInput").css({
-                  width: "50%",
-                  borderBottom: "1px  solid white"
-              });
-              $(".glyphicon.glyphicon-search").css("color", "limegreen");
-              $("form.navbar-form button").css("opacity", "1");
-            } else {
-              $("#searchInput").css({
-                  width: "0%",
-                  borderBottom: "0px solid white"
-              });
-              $(".glyphicon.glyphicon-search").css("color", "white");
-              $("form.navbar-form button").css("opacity", "0");
-            }
-          });
-      </script>
+    .navbar {
+      background-color: rgb(17, 55, 100);
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+    }
+
+    #bs-example-navbar-collapse-1 ul li a {
+      color: white;
+    }
+
+    .navbar-brand {
+      background-image: url("/images/Brand.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 25vw;
+      height: 20vw;
+    }
+
+    button.navbar-toggle {
+      border-radius: 50%;
+      height: 14vw;
+      padding: 4vw
+    }
+
+    button.navbar-toggle.collapsed {
+      border-radius: 50%;
+      height: 14vw;
+      padding: 4vw
+    }
+
+    .glyphicon.glyphicon-search {
+      color: white;
+      left: 5%;
+      transition: all 1s;
+    }
+
+    #searchInput {
+      margin-left: 5%;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+      width: 1%;
+      transition: all 1s;
+      color: white;
+    }
+
+    form.navbar-form {
+      border: none;
+      box-shadow: none;
+    }
+
+    form.navbar-form button {
+      color: white;
+      opacity: 0;
+      transition: all 2s;
+      background: none;
+      border: none;
+    }
+
+    @media (min-width: 740px) {
+      .navbar-brand {
+        transform: translateY(-1.3vw);
+        height: 6vw;
+        width: 9vw;
+      }
+      form.navbar-form button {
+        font-size: 1.3vw;
+      }
+      .nav.navbar-nav li a {
+        font-size: 1.2vw;
+        margin-left: 1.3vw
+      }
+      form.navbar-form {
+        width: 20vw;
+      }
+    }
+  </style>
+
+  <script>
+    let toggled = false;
+    $(".glyphicon.glyphicon-search").click(function () {
+      toggled = !toggled;
+      if (toggled) {
+        $("#searchInput").css({
+          width: "50%",
+          borderBottom: "1px  solid white"
+        });
+        $(".glyphicon.glyphicon-search").css("color", "limegreen");
+        $("form.navbar-form button").css("opacity", "1");
+      } else {
+        $("#searchInput").css({
+          width: "0%",
+          borderBottom: "0px solid white"
+        });
+        $(".glyphicon.glyphicon-search").css("color", "white");
+        $("form.navbar-form button").css("opacity", "0");
+      }
+    });
+  </script>

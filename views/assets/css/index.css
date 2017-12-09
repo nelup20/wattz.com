@@ -1,196 +1,192 @@
-.indexBulbs{
-    background-image: url("/images/IndexBulbs.jpg");
-    height: 150vw;
-    background-size: cover;
-    color: white;
-    padding-top: 50vw;
-    
+.indexBulbs {
+  background-image: url("/images/IndexBulbs.jpg");
+  height: 150vw;
+  background-size: cover;
+  color: white;
+  padding-top: 50vw;
 }
-.indexBulbs h2{
-    margin: 0 auto;
-    text-align: center;
-    font-weight: 300;
+.indexBulbs h2 {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
 }
-.indexBulbs h3{
-    margin: 3vw auto;
-    text-align: center;
+.indexBulbs h3 {
+  margin: 3vw auto;
+  text-align: center;
 }
-#aboutWattz{
-    color: rgb(97, 97, 97);
-    background-color: white;
+#aboutWattz {
+  color: rgb(97, 97, 97);
+  background-color: white;
 }
-#aboutWattz div{
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+#aboutWattz div {
+  margin-top: 10vw;
+  margin-bottom: 10vw;
 }
-#aboutWattz button{
-    background-color: rgb(17, 55, 100);
-    color: white;
-    margin-bottom: 5vw
+#aboutWattz button {
+  background-color: rgb(17, 55, 100);
+  color: white;
+  margin-bottom: 5vw;
 }
-#ourInvestments{
-    background-color: rgba(206, 204, 204, 0.192);
-    color: rgb(97, 97, 97)
+#ourInvestments {
+  background-color: rgba(206, 204, 204, 0.192);
+  color: rgb(97, 97, 97);
 }
-#ourInvestmentsRow{
-    margin-top: 10vw;
+#ourInvestmentsRow {
+  margin-top: 10vw;
 }
-#ourInvestmentsPart div{
-    margin-top: 10vw;
-    margin-bottom: 0;
+#ourInvestmentsPart div {
+  margin-top: 10vw;
+  margin-bottom: 0;
 }
-#investmentLastElem{
-    text-align: center;
-    color: rgba(206, 204, 204, 0.466);
-    margin-top: 0vw;
-    padding-bottom: 3vw;
+#investmentLastElem {
+  text-align: center;
+  color: rgba(206, 204, 204, 0.466);
+  margin-top: 0vw;
+  padding-bottom: 3vw;
+}
+#investmentLastElem i {
+  margin-left: 3vw;
+}
+#ourInvestments button {
+  background-color: rgb(17, 55, 100);
+  color: white;
+  margin-top: 10vw;
+  margin-bottom: 0vw;
+}
+#handShakeImg {
+  padding: initial;
+  margin-bottom: 20vw;
+}
+#ourInvestmentsPart {
+  background-color: white;
+}
+#emailPart {
+  background-color: rgb(17, 55, 100);
+  padding-top: 5vw;
+}
+input.col-xs-12.col-md-4 {
+  background: none;
+  margin-bottom: 4vw;
+  border: 1px solid white;
+  padding: 2.5vw;
+  padding-left: 7vw;
+  color: white;
+}
+::-webkit-input-placeholder {
+  /* (Safari, Google Chrome, Opera 15+) and Microsoft Edge */
+  color: white;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: white;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10 and 11 */
+  color: white;
+}
+::placeholder {
+  /* April 2017: Most modern browsers support */
+  color: white;
+}
+textarea.col-xs-12.col-md-12 {
+  background: none;
+  border: 1px solid white;
+  padding: 2.5vw;
+  padding-left: 6vw;
 
-   
+  color: white;
 }
-#investmentLastElem i{
-    margin-left: 3vw;
+span.glyphicon.glyphicon-bell {
+  color: white;
+  font-size: 7vw;
+  margin-left: 8vw;
 }
-#ourInvestments button{
-    background-color: rgb(17, 55, 100);
-    color: white;
-    margin-top: 10vw;
-    margin-bottom: 0vw
+.emailReason {
+  color: white;
+  text-align: center;
+  font-size: 3vw;
+  margin-bottom: 4vw;
 }
-#handShakeImg{
-    padding: initial;
-    margin-bottom: 20vw;
+#sendBtn {
+  color: rgb(17, 55, 100);
+  background-color: white;
+  border: 1px solid white;
+  margin: 5vw 39vw;
+  font-size: 6vw;
+  text-align: center;
+  border-radius: 1.3vw;
 }
-#ourInvestmentsPart{
-    background-color: white;
-   
+#newsAndInterruptions {
+  background-color: rgba(206, 204, 204, 0.473);
 }
-#emailPart{
-    background-color: rgb(17, 55, 100);
-    padding-top: 5vw;
+#newsAndInterruptions div.row {
+  background-color: rgba(206, 204, 204, 0.192);
 }
-input.col-xs-12.col-md-4{
-    background: none;
-    margin-bottom: 4vw;
-    border: 1px  solid white;
-    padding: 2.5vw;
-    padding-left: 7vw;
-    color: white;
+#newsPart {
+  background-color: white;
 }
-::-webkit-input-placeholder{  /* (Safari, Google Chrome, Opera 15+) and Microsoft Edge */
-    color: white;
+#newsPart span.text {
+  font-size: 3vw;
+  padding-left: 4vw;
 }
-:-moz-placeholder{          /* Mozilla Firefox 4 to 18 */
-    color: white;
+#newsPart button.btn.btn-default {
+  background-color: rgb(17, 55, 100);
+  color: white;
+  font-size: 3vw;
 }
-::-moz-placeholder{          /* Mozilla Firefox 19+ */
-    color: white;
+#newsPart div {
+  border-top: 1px solid rgba(0, 0, 0, 0.185);
+  padding-top: 3vw;
+  padding-bottom: 3vw;
 }
-:-ms-input-placeholder{      /* Internet Explorer 10 and 11 */
-    color: white;
-}   
-::placeholder{               /* April 2017: Most modern browsers support */
-    color: white;
+#newsLastElem {
+  text-align: center;
+  font-weight: bold;
 }
-textarea.col-xs-12.col-md-12{
-    background: none;
-    border: 1px  solid white;
-    padding: 2.5vw;
-    padding-left: 6vw;
-
-    color: white;
+#interruptionPart {
+  background-color: white;
+  margin-top: 10vw;
 }
-span.glyphicon.glyphicon-bell{
-    color: white;
-    font-size: 7vw;
-    margin-left: 8vw
+#interruptionPart span.text {
+  font-size: 3vw;
+  padding-left: 4vw;
 }
-.emailReason{
-    color: white;
-    text-align: center;
-    font-size: 3vw;
-    margin-bottom: 4vw;
+#interruptionPart button.btn.btn-default {
+  background-color: rgb(17, 55, 100);
+  color: white;
+  font-size: 3vw;
 }
-#sendBtn{
-    color: rgb(17, 55, 100);
-    background-color: white;
-    border: 1px solid white;
-    margin: 5vw 39vw;
-    font-size: 6vw;
-    text-align: center;
-    border-radius: 1.3vw;
-    
+#interruptionPart div {
+  border-top: 1px solid rgba(0, 0, 0, 0.185);
+  padding-top: 3vw;
+  padding-bottom: 3vw;
 }
-#newsAndInterruptions{
-    background-color: rgba(206, 204, 204, 0.473);
-    
+#interruptionLastElem {
+  text-align: center;
+  color: rgba(206, 204, 204, 0.466);
 }
-#newsAndInterruptions div.row{
-    background-color: rgba(206, 204, 204, 0.192);
+#interruptionLastElem i {
+  margin-left: 3vw;
 }
-#newsPart{
-    background-color: white;
+.activeCircle {
+  color: rgb(17, 55, 100);
 }
-#newsPart span.text{
-    font-size: 3vw;
-    padding-left: 4vw;
+#feelEnergyPart {
+  color: white;
+  background-color: #c23833;
+  text-align: center;
+  padding: 6vw;
+  font-family: "Pacifico", cursive;
 }
-#newsPart button.btn.btn-default{
-    background-color: rgb(17, 55, 100);
-    color: white;
-    font-size: 3vw;
+#feelEnergyPart h3 {
+  margin-top: 0;
 }
-#newsPart div{
-    border-top: 1px solid rgba(0, 0, 0, 0.185);
-    padding-top: 3vw;
-    padding-bottom: 3vw
-   
-}
-#newsLastElem{
-    text-align: center;
-    font-weight: bold
-}
-#interruptionPart{
-    background-color: white;
-    margin-top: 10vw
-}
-#interruptionPart span.text{
-    font-size: 3vw;
-    padding-left: 4vw;
-}
-#interruptionPart button.btn.btn-default{
-    background-color: rgb(17, 55, 100);
-    color: white;
-    font-size: 3vw;
-}
-#interruptionPart div{
-    border-top: 1px solid rgba(0, 0, 0, 0.185);
-    padding-top: 3vw;
-    padding-bottom: 3vw
-   
-}
-#interruptionLastElem{
-    text-align: center;
-    color: rgba(206, 204, 204, 0.466);
-   
-}
-#interruptionLastElem i{
-    margin-left: 3vw;
-}
-.activeCircle{
-    color: rgb(17, 55, 100);
-}
-#feelEnergyPart{
-    color: white;
-    background-color: #C23833;
-    text-align: center;
-    padding: 6vw;
-    font-family: 'Pacifico', cursive;
-}
-#feelEnergyPart h3{
-    margin-top: 0
-}
-iframe{
-    width: 100vw;
-    height: 100vw;
-    border: none; 
+iframe {
+  width: 100vw;
+  height: 100vw;
+  border: none;
 }
