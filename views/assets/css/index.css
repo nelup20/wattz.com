@@ -197,3 +197,11 @@ iframe {
   }
   
 }
+@media (min-width: 1180px){
+  .indexBulbs h2 {
+    font-size: 4vw
+  }
+  .indexBulbs h3 {
+    font-size: 2.5vw
+  }
+}
