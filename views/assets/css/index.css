@@ -245,6 +245,10 @@ iframe {
   }
 }
 @media (min-width: 992px) {
+  .indexBulbs {
+    height: 900px;
+    padding-top: 400px;
+  }
   #ourInvestmentsPart {
     height: 326px;
   }
@@ -300,6 +304,10 @@ iframe {
   }
 }
 @media (min-width: 1200px) {
+  .indexBulbs {
+    height: 1000px;
+    padding-top: 400px;
+  }
   #ourInvestmentsPart {
     height: 393px;
   }
