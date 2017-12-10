@@ -1,3 +1,4 @@
+
 const express = require("express"),
   app = express(),
   bodyParser = require("body-parser"),
@@ -9,6 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "views/assets")));
 
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+      user: "nplatonovbusiness@gmail.com", 
+      pass: "" // password
+  }
+});
+
 app.get("/", function(req, res) {
   res.render("index");
 });
@@ -18,14 +27,7 @@ app.post("/email", function(req, res){
   let email = req.body.email;
   let subject = req.body.subject;
   let message = req.body.message;
-  let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: "nplatonovbusiness@gmail.com", 
-        pass: "" // password
-    }
-});
-  var mailOptions = {
+  let mailOptions = {
   from: "Wattz.com",
   to: email,
   subject: "Re:  " + subject,
@@ -50,6 +52,38 @@ app.post("/email", function(req, res){
       console.log("SUCCESS!")
     }
   });
+});
+
+app.post("/newsletter", function(req, res){
+  let week = 7 * 24 * 60 * 60 * 1000;
+  let mailOptions = {
+    from: "Wattz.com",
+    to: req.body.email,
+    subject: "Weekly newsletter !",
+    html: `<h5>Dear Customer,</h5>
+          <div>Thank you for your subscription to our weekly newsletter</div>
+          <div>Attached you will find this week's edition.</div>
+          <div>Happy reading and happy holidays !</div>`,
+    attachments: [
+      {
+        filename: "newsletter.pdf",
+        path: "./attachments/newsletter.pdf"
+      }
+    ]
+  };
+  function sendMail(){
+    transporter.sendMail(mailOptions, function(err, info){
+      if(err){
+        console.log(err);
+        console.log("SOMETHING WENT WRONG");
+      } else {
+        console.log("MESSAGE SENT: " + info.response);
+        console.log("SUCCESS!")
+      }
+    });
+  };
+  sendMail();
+  setInterval(sendMail, week);
 });
 
 app.listen(process.env.PORT || 3000, function(error) {
