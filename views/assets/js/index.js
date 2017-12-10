@@ -28,3 +28,24 @@ $("#interruptionPart button").click(function(){
   $(this.nextSibling.nextSibling).text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.")
   $(this.nextSibling.nextSibling).fadeIn();
 });
+
+$(document).ready(function(){
+  $("#emailForm").submit(function(e){
+    e.preventDefault();
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var subject = $("#subject").val();
+    var message = $("#message").val();
+    $.post("/email", {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    });
+    $("#name").val("");
+    $("#email").val("");
+    $("#subject").val("");
+    $("#message").val(" Message");
+    alert("Thank you for your email. We will get back to you as soon as possible")
+  });
+});
