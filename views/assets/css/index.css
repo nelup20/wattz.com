@@ -64,6 +64,9 @@
   background-color: rgb(17, 55, 100);
   padding-top: 5vw;
 }
+#emailPart .container {
+  width: 91vw;
+}
 input.col-xs-12.col-md-4 {
   background: none;
   margin-bottom: 4vw;
@@ -190,18 +193,51 @@ iframe {
   height: 100vw;
   border: none;
 }
-@media (min-width: 768px){
+@media (min-width: 630px) {
+  span.glyphicon.glyphicon-bell {
+    margin-left: 9.1vw;
+  }
+}
+@media (min-width: 768px) {
   .indexBulbs {
     height: 100vw;
-    padding-top: 45vw
+    padding-top: 45vw;
   }
-  
+  input.col-xs-12.col-md-4 {
+    background: none;
+    margin-bottom: 4vw;
+    padding: 2vw;
+    padding-left: 4vw;
+    font-size: 2.5vw;
+  }
+  textarea.col-xs-12.col-md-12 {
+    padding: 2vw;
+    padding-left: 3vw;
+    font-size: 2.5vw;
+  }
+  #sendBtn {
+    font-size: 3.5vw;
+  }
+  #newsPart span.text {
+    font-size: 2.5vw;
+    padding-left: 3vw;
+  }
+  #newsPart button.btn.btn-default {
+    font-size: 2vw;
+  }
+  #interruptionPart span.text {
+    font-size: 2.5vw;
+    padding-left: 3vw;
+  }
+  #interruptionPart button.btn.btn-default {
+    font-size: 2vw;
+  }
 }
-@media (min-width: 1180px){
+@media (min-width: 1180px) {
   .indexBulbs h2 {
-    font-size: 4vw
+    font-size: 4vw;
   }
   .indexBulbs h3 {
-    font-size: 2.5vw
+    font-size: 2.5vw;
   }
 }
