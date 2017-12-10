@@ -239,6 +239,10 @@ iframe {
   #newsAndInterruptions .container {
     width: 100vw;
   }
+  iframe {
+    width: 100vw;
+    height: 650px;
+  }
 }
 @media (min-width: 992px) {
   #ourInvestmentsPart {
