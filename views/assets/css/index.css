@@ -244,6 +244,9 @@ iframe {
   #ourInvestmentsPart{
     height: 326px;
   }
+  #handShakeImg{
+    height: 326px;
+  }
   #ourInvestmentsPart div{
     margin-top: 15px;
   }
@@ -263,6 +266,13 @@ iframe {
   #aboutPart button{
     margin-bottom: 0
   }
+  #emailPart form input {
+    width: 31.3%;
+    margin-left: 3%
+  }
+  #emailPart form :first-child {
+    margin-left: 0
+  }
 }
 @media (min-width: 1180px) {
   .indexBulbs h2 {
@@ -281,6 +291,7 @@ iframe {
   }
   #handShakeImg{
     margin-bottom: 45px;
+    height: 393px;
   }
   #ourInvestmentsPart div{
     margin-top: 30px;
@@ -299,5 +310,31 @@ iframe {
     margin-top: 90px;
     margin-bottom: 100px;
     font-size: 18px;
+  }
+  #emailPart .container{
+    width: 1170px
+  }
+  span.glyphicon.glyphicon-bell {
+    margin-left: 150px;
+    font-size: 50px
+  }
+  .emailReason{
+    font-size: 25px
+  }
+  #emailPart form input {
+    padding: 15px;
+    font-size: 25px;
+    margin-bottom: 40px
+  }
+  textarea.col-xs-12.col-md-12 {
+    padding: 15px;
+    padding-left: 6px;
+    font-size: 25px;
+  
+  }
+  #sendBtn {
+    margin: 40px 500px;
+    font-size: 40px;
+    border-radius: 15px;
   }
 }
