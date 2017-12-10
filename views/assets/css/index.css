@@ -232,6 +232,13 @@ iframe {
   #interruptionPart button.btn.btn-default {
     font-size: 2vw;
   }
+  #ourInvestments .container{
+    width: 100vw;
+  }
+  
+  #newsAndInterruptions .container{
+    width: 100vw;
+  }
 }
 @media (min-width: 1180px) {
   .indexBulbs h2 {
