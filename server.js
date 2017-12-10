@@ -22,6 +22,10 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
+app.get("/about", function(req, res){
+  res.render("about");
+});
+
 app.post("/email", function(req, res){
   let name = req.body.name;
   let email = req.body.email;

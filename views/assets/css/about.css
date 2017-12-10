@@ -1,0 +1,15 @@
+#whoAreWe{
+    background-image: url("/images/about1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 400px;
+    margin-top: 0
+}
+#whoAreWe h2{
+    text-align: center;
+    margin-top: 0;
+    color: rgb(252, 252, 252);
+    padding-top: 50px;
+    opacity: 0;
+}
