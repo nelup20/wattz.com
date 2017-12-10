@@ -1,152 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <%- include('partials/navbar') %>
     <link rel="stylesheet" href="/css/index.css">
 
-    <%- include('partials/navbar') %>
-
-        <div class="indexBulbs">
-            <h2>Lorem Ipsum</h2>
-            <h3>Lorem Ipsum sit dolor</h3>
-        </div>
-        <div id="aboutPart">
-            <div class="container">
-                <div class="row">
-                    <img src="/images/bulbDrawing.png" alt="" class="col-xs-12 col-md-4" id="aboutWattzCartoon">
-                    <div class="col-xs-12 col-md-8" id="aboutWattz">
-                        <h4>About Wattz</h4>
-                        <h3>Transcending regular energy</h3>
-                        <div>
-                            Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet
-                            et, porttitor at sem.
-                        </div>
-                        <button class="btn btn-default">Discover</button>
+    <div class="indexBulbs">
+        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum sit dolor</h3>
+    </div>
+    <div id="aboutPart">
+        <div class="container">
+            <div class="row">
+                <img src="/images/bulbDrawing.png" alt="" class="col-xs-12 col-md-4" id="aboutWattzCartoon">
+                <div class="col-xs-12 col-md-8" id="aboutWattz">
+                    <h4>About Wattz</h4>
+                    <h3>Transcending regular energy</h3>
+                    <div>
+                        Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet
+                        et, porttitor at sem.
                     </div>
+                    <button class="btn btn-default">Discover</button>
                 </div>
             </div>
         </div>
-        <div id="ourInvestments">
-            <div class="container">
-                <div class="row" id="ourInvestmentsRow">
-                    <div class="col-xs-12 col-md-6" id="ourInvestmentsPart">
-                        <h4>Our Investments</h4>
-                        <h3>Made possible with Wattz</h3>
-                        <div>
-                            Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet
-                            et, porttitor at sem.
-                        </div>
-                        <div>
-                            Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada.
-                        </div>
-                        <button class="btn btn-default" id="investmentsBtn">
+    </div>
+    <div id="ourInvestments">
+        <div class="container">
+            <div class="row" id="ourInvestmentsRow">
+                <div class="col-xs-12 col-md-6" id="ourInvestmentsPart">
+                    <h4>Our Investments</h4>
+                    <h3>Made possible with Wattz</h3>
+                    <div>
+                        Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet
+                        et, porttitor at sem.
+                    </div>
+                    <div>
+                        Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada.
+                    </div>
+                    <button class="btn btn-default" id="investmentsBtn">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </button>
+                    <div id="investmentLastElem">
+                        <i class="fa fa-circle activeCircle" aria-hidden="true"></i>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <img src="/images/handShake1.jpg" alt="" class="col-xs-12 col-md-6" id="handShakeImg">
+            </div>
+        </div>
+    </div>
+    <div id="emailPart">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                    <div class="emailReason">Fault notice</div>
+                </div>
+                <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                    <div class="emailReason">Leak notice</div>
+                </div>
+                <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                    <div class="emailReason">Other complaints</div>
+                </div>
+            </div>
+            <form action="/email" class="row" method="POST" id="emailForm">
+                <input type="text" placeholder="Name" id="name" class="col-xs-12 col-md-4">
+                <input type="email" placeholder="E-mail" id="email" class="col-xs-12 col-md-4">
+                <input type="text" placeholder="Subject" id="subject" class="col-xs-12 col-md-4">
+                <textarea name="message" id="message" cols="30" rows="5" class="col-xs-12 col-md-12"> Message</textarea>
+                <button id="sendBtn">Send</button>
+            </form>
+        </div>
+    </div>
+    <div id="newsAndInterruptions">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6" id="newsPart">
+                    <h2>News</h2>
+                    <div>
+                        <button class="btn btn-default">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         </button>
-                        <div id="investmentLastElem">
-                            <i class="fa fa-circle activeCircle" aria-hidden="true"></i>
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                        </div>
+                        <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
                     </div>
-                    <img src="/images/handShake1.jpg" alt="" class="col-xs-12 col-md-6" id="handShakeImg">
+                    <div>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </button>
+                        <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
+                    </div>
+                    <div>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </button>
+                        <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
+                    </div>
+                    <div id="newsLastElem">SEE ALL</div>
                 </div>
-            </div>
-        </div>
-        <div id="emailPart">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-                        <div class="emailReason">Fault notice</div>
+                <div class="col-xs-12 col-md-6" id="interruptionPart">
+                    <h2>Planned Interuptions</h2>
+                    <div>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </button>
+                        <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
                     </div>
-                    <div class="col-xs-4">
-                        <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-                        <div class="emailReason">Leak notice</div>
+                    <div>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </button>
+                        <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
                     </div>
-                    <div class="col-xs-4">
-                        <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
-                        <div class="emailReason">Other complaints</div>
+                    <div>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </button>
+                        <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
                     </div>
-                </div>
-                <form action="/email" class="row" method="POST" id="emailForm">
-                    <input type="text" placeholder="Name" id="name" class="col-xs-12 col-md-4">
-                    <input type="email" placeholder="E-mail" id="email" class="col-xs-12 col-md-4">
-                    <input type="text" placeholder="Subject" id="subject" class="col-xs-12 col-md-4">
-                    <textarea name="message" id="message" cols="30" rows="5" class="col-xs-12 col-md-12"> Message</textarea>
-                    <button id="sendBtn">Send</button>
-                </form>
-            </div>
-        </div>
-        <div id="newsAndInterruptions">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-6" id="newsPart">
-                        <h2>News</h2>
-                        <div>
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </button>
-                            <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </button>
-                            <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </button>
-                            <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
-                        </div>
-                        <div id="newsLastElem">SEE ALL</div>
-                    </div>
-                    <div class="col-xs-12 col-md-6" id="interruptionPart">
-                        <h2>Planned Interuptions</h2>
-                        <div>
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </button>
-                            <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </button>
-                            <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
-                        </div>
-                        <div>
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            </button>
-                            <span class="text">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.</span>
-                        </div>
-                        <div id="interruptionLastElem">
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                        </div>
+                    <div id="interruptionLastElem">
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="feelEnergyPart">
-            <h1>Feel</h1>
-            <h3>the energy</h3>
-        </div>
-        <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfCb7uT9jdmZZfVZFSoioendS-KXtEfDU
+    </div>
+    <div id="feelEnergyPart">
+        <h1>Feel</h1>
+        <h3>the energy</h3>
+    </div>
+    <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfCb7uT9jdmZZfVZFSoioendS-KXtEfDU
               &q=Somewhere" allowfullscreen>
-        </iframe>
+    </iframe>
 
-        <%- include('partials/footer') %>
-
-            <script src="/js/index.js"></script>
-            </body>
-
-</html>
+    <script src="/js/index.js"></script>
+    <%- include('partials/footer') %>

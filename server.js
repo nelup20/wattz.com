@@ -86,6 +86,11 @@ app.post("/newsletter", function(req, res){
   setInterval(sendMail, week);
 });
 
+app.use(function(req, res){
+  res.status(404);
+  res.render("404");
+});
+
 app.listen(process.env.PORT || 3000, function(error) {
   console.log("SERVER STARTED ON PORT 3000");
 });
