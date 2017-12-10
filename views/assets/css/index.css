@@ -198,7 +198,7 @@ iframe {
     margin-left: 9.1vw;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .indexBulbs {
     height: 100vw;
     padding-top: 45vw;
@@ -232,46 +232,59 @@ iframe {
   #interruptionPart button.btn.btn-default {
     font-size: 2vw;
   }
-  
+
   #ourInvestmentsRow {
     margin-top: 7vw;
   }
   #newsAndInterruptions .container {
     width: 100vw;
-  } 
+  }
 }
-@media (min-width: 992px){
-  #ourInvestmentsPart{
+@media (min-width: 992px) {
+  #ourInvestmentsPart {
     height: 326px;
   }
-  #handShakeImg{
+  #handShakeImg {
     height: 326px;
   }
-  #ourInvestmentsPart div{
+  #ourInvestmentsPart div {
     margin-top: 15px;
   }
-  #ourInvestmentsPart button{
+  #ourInvestmentsPart button {
     margin-top: 3vw;
   }
   #investmentLastElem i {
-    margin-left: 15px
+    margin-left: 15px;
   }
-  #aboutWattz div{
+  #aboutWattz div {
     margin-top: 40px;
     margin-bottom: 25px;
   }
-  #aboutPart .container{
+  #aboutPart .container {
     width: 750px;
   }
-  #aboutPart button{
-    margin-bottom: 0
+  #aboutPart button {
+    margin-bottom: 0;
   }
   #emailPart form input {
     width: 31.3%;
-    margin-left: 3%
+    margin-left: 3%;
   }
   #emailPart form :first-child {
-    margin-left: 0
+    margin-left: 0;
+  }
+  #newsPart {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #interruptionPart {
+    margin-top: 25px;
+  }
+  #interruptionLastElem i {
+    margin-left: 8px;
+  }
+  #feelEnergyPart {
+    padding: 30px;
   }
 }
 @media (min-width: 1180px) {
@@ -282,55 +295,83 @@ iframe {
     font-size: 2.5vw;
   }
 }
-@media (min-width: 1200px){
-  #ourInvestmentsPart{
+@media (min-width: 1200px) {
+  #ourInvestmentsPart {
     height: 393px;
   }
-  #ourInvestmentsRow{
+  #ourInvestmentsRow {
     margin-top: 45px;
   }
-  #handShakeImg{
+  #handShakeImg {
     margin-bottom: 45px;
     height: 393px;
   }
-  #ourInvestmentsPart div{
+  #ourInvestmentsPart div {
     margin-top: 30px;
     font-size: 18px;
   }
-  #ourInvestmentsPart button{
+  #ourInvestmentsPart button {
     margin-top: 40px;
   }
   #investmentLastElem i {
-    margin-left: 15px
+    margin-left: 15px;
   }
-  #aboutPart .container{
+  #aboutPart .container {
     width: 1170px;
   }
-  #aboutWattz div{
+  #aboutWattz div {
     margin-top: 90px;
     margin-bottom: 100px;
     font-size: 18px;
   }
-  #emailPart .container{
-    width: 1170px
+  #emailPart .container {
+    width: 1170px;
+  }
+  #newsAndInterruptions .container {
+    width: 1170px;
+  }
+  #newsAndInterruptions div.row {
+    background: none;
+  }
+  #newsAndInterruptions span.text {
+    font-size: 15px;
+    padding-left: 5px;
+  }
+  #newsAndInterruptions button.btn.btn-default {
+    font-size: 15px;
+  }
+  #newsPart {
+    width: 45%;
+    margin-left: 3.5%;
+  }
+  #interruptionPart {
+    width: 45%;
+    margin-left: 3.5%;
+  }
+  #interruptionPart div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #newsPart div {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   span.glyphicon.glyphicon-bell {
     margin-left: 150px;
-    font-size: 50px
+    font-size: 50px;
   }
-  .emailReason{
-    font-size: 25px
+  .emailReason {
+    font-size: 25px;
   }
   #emailPart form input {
     padding: 15px;
     font-size: 25px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
   textarea.col-xs-12.col-md-12 {
     padding: 15px;
     padding-left: 6px;
     font-size: 25px;
-  
   }
   #sendBtn {
     margin: 40px 500px;
