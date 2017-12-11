@@ -4,7 +4,10 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   ejs = require("ejs"),
   path = require("path"),
-  nodemailer = require("nodemailer");
+  nodemailer = require("nodemailer"),
+  multer  = require('multer'),
+  upload = multer({ dest: 'uploads/' });
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -68,7 +71,7 @@ app.post("/newsletter", function(req, res){
     from: "Wattz.com",
     to: req.body.email,
     subject: "Weekly newsletter !",
-    html: `<h5>Dear Customer,</h5>
+    html: `<h4>Dear Customer,</h4>
           <div>Thank you for your subscription to our weekly newsletter</div>
           <div>Attached you will find this week's edition.</div>
           <div>Happy reading and happy holidays !</div>`,
@@ -94,13 +97,12 @@ app.post("/newsletter", function(req, res){
   setInterval(sendMail, week);
 });
 
-app.post("/career/application", function(req, res){
+app.post("/career/application", upload.single("resume"), function(req, res){
   let applicant = {
     name: req.body.name,
     bday: req.body.bday,
     gender: req.body.gender,
     email: req.body.email,
-    resume: req.body.resume
   };
   var pronoun;
   applicant.gender === "male" ? pronoun = "Mister" : pronoun = "Miss";
@@ -109,21 +111,21 @@ app.post("/career/application", function(req, res){
     from: "Wattz.com",
     to: applicant.email,
     subject: "Weekly newsletter !",
-    html: `<h5>Dear ${pronoun} ${applicant.name},</h5>
+    html: `<h3>Dear ${pronoun} ${applicant.name},</h3>
           <div>We have received your application and will be reviewing it shortly.</div>
           <div>Please check your email again for a reply within a few days.</div>
           <div>Thank you for your application.</div>
           <hr>
-          <h4>Your application: </h4>
+          <h3>Your application: </h3>
           <div>Name: ${applicant.name}</div>
           <div>Birth date: ${applicant.bday}</div>
           <div>Gender: ${applicant.gender}</div>
           <div>Email: ${applicant.email}</div>
-          <div>Resume: ${applicant.resume}</div>`,
+          <div>Resume: ${req.file.originalname}</div>`,
     attachments: [
       {
-        filename: applicant.resume,
-        path: ""
+        filename: req.file.originalname,
+        path: req.file.path
       }
     ]
   };
