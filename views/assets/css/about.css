@@ -33,3 +33,38 @@
   margin-left: 40%;
   margin-top: 180px;
 }
+@media (min-width: 768px) {
+  #aboutWattz div {
+    font-size: 20px;
+  }
+  #whoAreWe {
+    height: 600px;
+  }
+  #aboutWattz i.fa.fa-spinner.fa-pulse.fa-3x.fa-fw {
+    margin-left: 45%;
+  }
+  #aboutPart .container {
+    width: 750px;
+  }
+}
+@media (min-width: 1340px) {
+  #whoAreWe {
+    height: 90vh;
+  }
+  #aboutWattz {
+    height: 600px;
+  }
+  #aboutWattz h3 {
+    text-align: center;
+    font-family: "Pacifico", sans-serif;
+    font-size: 50px;
+    display: none;
+  }
+  #aboutWattz div {
+    font-size: 26px;
+    display: none;
+  }
+  #aboutWattz i.fa.fa-spinner.fa-pulse.fa-3x.fa-fw {
+    margin-top: 280px;
+  }
+}

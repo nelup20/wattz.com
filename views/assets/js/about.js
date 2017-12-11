@@ -4,11 +4,25 @@ var title = $("#aboutWattz h3")
 var charNumber = 0;
 var textCharNumber = 0;
 $(document).ready(function() {
-  $("#whoAreWe h2").css({
-    "padding-top": "150px",
-    opacity: "1",
-    transition: "all 1s"
-  });
+  if (window.innerWidth < 768) {
+    $("#whoAreWe h2").css({
+      "padding-top": "150px",
+      opacity: "1",
+      transition: "all 1s"
+    });
+  } else if (window.innerWidth < 1340) {
+    $("#whoAreWe h2").css({
+      "padding-top": "277px",
+      opacity: "1",
+      transition: "all 1s"
+    });
+  } else {
+    $("#whoAreWe h2").css({
+      "padding-top": "40vh",
+      opacity: "1",
+      transition: "all 1s"
+    });
+  }
   setTimeout(function() {
     var wholeTitle = "";
     $("#aboutWattz i.fa.fa-spinner.fa-pulse.fa-3x.fa-fw").fadeOut(100);
@@ -79,5 +93,5 @@ $(document).ready(function() {
         }
       }, 40);
     })();
-  }, 3500);
+  }, 4500);
 });
