@@ -95,6 +95,47 @@ app.post("/newsletter", function(req, res){
 });
 
 app.post("/career/application", function(req, res){
+  let applicant = {
+    name: req.body.name,
+    bday: req.body.bday,
+    gender: req.body.gender,
+    email: req.body.email,
+    resume: req.body.resume
+  };
+  var pronoun;
+  applicant.gender === "male" ? pronoun = "Mister" : pronoun = "Miss";
+
+  let mailOptions = {
+    from: "Wattz.com",
+    to: applicant.email,
+    subject: "Weekly newsletter !",
+    html: `<h5>Dear ${pronoun} ${applicant.name},</h5>
+          <div>We have received your application and will be reviewing it shortly.</div>
+          <div>Please check your email again for a reply within a few days.</div>
+          <div>Thank you for your application.</div>
+          <hr>
+          <h4>Your application: </h4>
+          <div>Name: ${applicant.name}</div>
+          <div>Birth date: ${applicant.bday}</div>
+          <div>Gender: ${applicant.gender}</div>
+          <div>Email: ${applicant.email}</div>
+          <div>Resume: ${applicant.resume}</div>`,
+    attachments: [
+      {
+        filename: applicant.resume,
+        path: ""
+      }
+    ]
+  };
+  transporter.sendMail(mailOptions, function(err, info){
+    if(err){
+      console.log(err);
+      console.log("SOMETHING WENT WRONG");
+    } else {
+      console.log("MESSAGE SENT: " + info.response);
+      console.log("SUCCESS!")
+    }
+  });
   res.render("success");
 });
 
