@@ -6,8 +6,20 @@ const express = require("express"),
   path = require("path"),
   nodemailer = require("nodemailer"),
   multer  = require('multer'),
-  upload = multer({ dest: 'uploads/' });
+  upload = multer({ dest: 'uploads/' }),
+  fs = require("fs"),
+  filesDir = __dirname + "/uploads";
 
+fs.readdir(filesDir, function(err, files){
+  console.log(files.length);
+  for (const file of files){
+    fs.unlink(path.join(filesDir, file), function(err){
+      if (err){
+        console.log(err)
+      };
+    });
+  }
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
