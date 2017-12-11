@@ -1,4 +1,5 @@
 <%- include("partials/navbar") %>
+<link rel="stylesheet" href="/css/career.css">
 
     <div class="container">
         <h2>Looking for a job ?</h2>
@@ -9,7 +10,7 @@
                 <input type="text" placeholder="Last name, First name" class="form-control" name="name" id="name" required>
             </div>
             <div class="form-group">
-                <label for="bday">Your date of birth: </label>
+                <label for="bday">Date of birth: </label>
                 <input type="date" name="bday" id="bday" class="form-control" required>
             </div>
             <div class="form-group">
@@ -26,7 +27,7 @@
                 <label for="resume" class="">Resume: </label>
                 <input type="file" name="resume" accept=".pdf,.doc" required>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="lastFormGroup">
                 <input type="submit" class="form-control btn btn-primary">
             </div>
         </form>

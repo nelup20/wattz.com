@@ -94,6 +94,10 @@ app.post("/newsletter", function(req, res){
   setInterval(sendMail, week);
 });
 
+app.post("/career/application", function(req, res){
+  res.render("success");
+});
+
 app.use(function(req, res){
   res.status(404);
   res.render("404");
