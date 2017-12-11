@@ -1,15 +1,35 @@
-#whoAreWe{
-    background-image: url("/images/about1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 400px;
-    margin-top: 0
+#whoAreWe {
+  background-image: url("/images/about1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 400px;
+  margin-top: 0;
 }
-#whoAreWe h2{
-    text-align: center;
-    margin-top: 0;
-    color: rgb(252, 252, 252);
-    padding-top: 50px;
-    opacity: 0;
+#whoAreWe h2 {
+  text-align: center;
+  margin-top: 0;
+  color: rgb(252, 252, 252);
+  padding-top: 50px;
+  opacity: 0;
+}
+#aboutWattz {
+  height: 450px;
+}
+#aboutWattz h3 {
+  text-align: center;
+  font-family: "Pacifico", sans-serif;
+  font-size: 35px;
+  display: none;
+}
+#aboutWattz div {
+  margin-top: 20px;
+  display: none;
+}
+#aboutWattz div:last-child {
+  margin-bottom: 30px;
+}
+#aboutWattz i.fa.fa-spinner.fa-pulse.fa-3x.fa-fw {
+  margin-left: 40%;
+  margin-top: 180px;
 }
