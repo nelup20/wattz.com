@@ -26,6 +26,10 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
+app.get("/career", function(req, res){
+  res.render("career");
+});
+
 app.post("/email", function(req, res){
   let name = req.body.name;
   let email = req.body.email;
