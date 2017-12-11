@@ -10,16 +10,6 @@ const express = require("express"),
   fs = require("fs"),
   filesDir = __dirname + "/uploads";
 
-fs.readdir(filesDir, function(err, files){
-  console.log(files.length);
-  for (const file of files){
-    fs.unlink(path.join(filesDir, file), function(err){
-      if (err){
-        console.log(err)
-      };
-    });
-  }
-});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -147,7 +137,17 @@ app.post("/career/application", upload.single("resume"), function(req, res){
       console.log("SOMETHING WENT WRONG");
     } else {
       console.log("MESSAGE SENT: " + info.response);
-      console.log("SUCCESS!")
+      console.log("SUCCESS!");
+      fs.readdir(filesDir, function(err, files){
+        console.log(files.length);
+        for (const file of files){
+          fs.unlink(path.join(filesDir, file), function(err){
+            if (err){
+              console.log(err)
+            };
+          });
+        }
+      });
     }
   });
   res.render("success");
