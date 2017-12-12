@@ -20,6 +20,11 @@ $("#investmentsBtn").click(function() {
     }
   }
 });
+$("#newsPart button").click(function(){
+  $(this.nextSibling.nextSibling).fadeOut(0);
+  $(this.nextSibling.nextSibling).text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.")
+  $(this.nextSibling.nextSibling).fadeIn();
+});
 
 $("#interruptionPart button").click(function(){
   changedTextAmount === 3 ? changedTextAmount = 3 : changedTextAmount++;
