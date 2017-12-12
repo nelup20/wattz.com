@@ -35,6 +35,14 @@ $("#interruptionPart button").click(function(){
 });
 
 $(document).ready(function(){
+  $("#youtubeVid iframe").attr("src", "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0");
+  $("#discoverBtn").click(function(){
+    $("#youtubeVid").show();
+  });
+  $("#closeVidBtn").click(function(){
+    $("#youtubeVid").hide();
+    $("#youtubeVid iframe").attr("src", "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0");
+  });
   $("#emailForm").submit(function(e){
     e.preventDefault();
     var name = $("#name").val();

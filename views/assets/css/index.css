@@ -193,6 +193,52 @@ iframe {
   height: 100vw;
   border: none;
 }
+#youtubeVid {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+  z-index: 1;
+}
+#youtubeVid iframe{
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  display: block;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+#youtubeVid i.fa.fa-times{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#youtubeVid i.fa.fa-times:hover{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
 @media (min-width: 630px) {
   span.glyphicon.glyphicon-bell {
     margin-left: 9.1vw;
