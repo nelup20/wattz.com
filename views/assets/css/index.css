@@ -221,7 +221,7 @@ iframe {
   top: 15px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -291,6 +291,9 @@ iframe {
   }
 }
 @media (min-width: 992px) {
+  #youtubeVid i.fa.fa-times{
+    font-size: 40px;
+  }
   .indexBulbs {
     height: 900px;
     padding-top: 400px;
