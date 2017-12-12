@@ -9,19 +9,28 @@ const express = require("express"),
   upload = multer({ dest: 'uploads/' }),
   fs = require("fs"),
   filesDir = __dirname + "/uploads",
-  emailPass = require("./sensitive");
+  sensitive = require("./sensitive"),
+  paypal = require("paypal-rest-sdk"),
+  cors = require("cors");
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "views/assets")));
+app.use(cors({credentials: true, origin: true}));
 
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
       user: "nplatonovbusiness@gmail.com", 
-      pass: emailPass // password
+      pass: sensitive.emailPass // password
   }
+});
+
+paypal.configure({
+  'mode': 'sandbox', //sandbox or live
+  'client_id': sensitive.paypalID,
+  'client_secret': sensitive.paypalSecret
 });
 
 app.get("/", function(req, res) {
@@ -38,6 +47,52 @@ app.get("/career", function(req, res){
 
 app.get("/products", function(req, res){
   res.render("products");
+});
+
+app.post("/buy", function(req, res){
+  var create_payment_json = {
+    "intent": "sale",
+    "payer": {
+        "payment_method": "paypal"
+    },
+    "redirect_urls": {
+        "return_url": "http://localhost:3000/",
+        "cancel_url": "http://localhost:3000/products"
+    },
+    "transactions": [{
+        "item_list": {
+            "items": [{
+                "name": req.body.product,
+                "sku": "electricity package",
+                "price": req.body.price,
+                "currency": "USD",
+                "quantity": 1
+            }]
+        },
+        "amount": {
+            "currency": "USD",
+            "total": req.body.price
+        },
+        "description": "Electricity package provided by Wattz LLC"
+    }]
+};
+
+var redirectURL;
+
+paypal.payment.create(create_payment_json, function (error, payment) {
+    if (error) {
+        throw error;
+    } else {
+        for(var i = 0; i < payment.links.length; i++){
+          if(payment.links[i].rel === "approval_url"){
+             redirectURL = payment.links[i].href;
+             res.send(redirectURL);   
+          }
+        };
+    };
+});
+
+
 });
 
 app.post("/email", function(req, res){
