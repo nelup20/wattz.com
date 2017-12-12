@@ -8,7 +8,8 @@ const express = require("express"),
   multer  = require('multer'),
   upload = multer({ dest: 'uploads/' }),
   fs = require("fs"),
-  filesDir = __dirname + "/uploads";
+  filesDir = __dirname + "/uploads",
+  emailPass = require("./sensitive");
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,7 +20,7 @@ let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
       user: "nplatonovbusiness@gmail.com", 
-      pass: "Starnet1997564212" // password
+      pass: emailPass // password
   }
 });
 
