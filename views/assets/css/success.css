@@ -1,20 +1,21 @@
-.container h2,h3{
-    font-family: "Pacifico", sans-serif;
-    text-align: center;
-    display: none;
+.container h2,
+h3 {
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  display: none;
 }
-#messageContainer{
-    height: 500px;
+#messageContainer {
+  height: 500px;
 }
-.container h2{
-    padding-top: 50px;
+.container h2 {
+  padding-top: 50px;
 }
-.container h3{
-    padding-top: 50px;
-    padding-bottom: 50px
+.container h3 {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-#envelopeDiv{
-    font-size: 70px;
-    text-align: center;
-    display: none;
+#envelopeDiv {
+  font-size: 70px;
+  text-align: center;
+  display: none;
 }

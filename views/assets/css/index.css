@@ -202,11 +202,11 @@ iframe {
   left: 0;
   top: 0;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
 }
-#youtubeVid iframe{
+#youtubeVid iframe {
   width: 80%;
   max-width: 1200px;
   margin: auto;
@@ -216,7 +216,7 @@ iframe {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-#youtubeVid i.fa.fa-times{
+#youtubeVid i.fa.fa-times {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -225,19 +225,27 @@ iframe {
   font-weight: bold;
   transition: 0.3s;
 }
-#youtubeVid i.fa.fa-times:hover{
+#youtubeVid i.fa.fa-times:hover {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 @media (min-width: 630px) {
   span.glyphicon.glyphicon-bell {
@@ -291,7 +299,7 @@ iframe {
   }
 }
 @media (min-width: 992px) {
-  #youtubeVid i.fa.fa-times{
+  #youtubeVid i.fa.fa-times {
     font-size: 40px;
   }
   .indexBulbs {

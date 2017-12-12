@@ -1,162 +1,161 @@
 body {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
+}
 
-  .navbar {
-    background-color: rgb(17, 55, 100);
-    margin: 0;
-    border: 0;
-    border-radius: 0;
-  }
+.navbar {
+  background-color: rgb(17, 55, 100);
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
 
-  #bs-example-navbar-collapse-1 ul li a {
-    color: white;
-  }
+#bs-example-navbar-collapse-1 ul li a {
+  color: white;
+}
 
-  .navbar-brand {
-    background-image: url("/images/Brand.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 25vw;
-    height: 20vw;
-  }
+.navbar-brand {
+  background-image: url("/images/Brand.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25vw;
+  height: 20vw;
+}
 
-  button.navbar-toggle {
-    border-radius: 50%;
-    height: 14vw;
-    padding: 4vw
-  }
+button.navbar-toggle {
+  border-radius: 50%;
+  height: 14vw;
+  padding: 4vw;
+}
 
-  button.navbar-toggle.collapsed {
-    border-radius: 50%;
-    height: 14vw;
-    padding: 4vw
-  }
+button.navbar-toggle.collapsed {
+  border-radius: 50%;
+  height: 14vw;
+  padding: 4vw;
+}
 
-  .glyphicon.glyphicon-search {
-    color: white;
-    left: 5%;
-    transition: all 1s;
-  }
+.glyphicon.glyphicon-search {
+  color: white;
+  left: 5%;
+  transition: all 1s;
+}
 
-  #searchInput {
-    margin-left: 5%;
-    background: none;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    width: 1%;
-    transition: all 1s;
-    color: white;
-  }
+#searchInput {
+  margin-left: 5%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  width: 1%;
+  transition: all 1s;
+  color: white;
+}
 
+form.navbar-form {
+  border: none;
+  box-shadow: none;
+}
+
+form.navbar-form button {
+  color: white;
+  opacity: 0;
+  transition: all 2s;
+  background: none;
+  border: none;
+}
+
+#dropdownToggle {
+  background-color: rgb(17, 55, 100);
+}
+
+ul.dropdown-menu {
+  background-color: rgb(17, 55, 100);
+}
+
+ul.dropdown-menu li a:hover {
+  background-color: rgb(36, 110, 194);
+}
+
+@media (min-width: 570px) {
   form.navbar-form {
-    border: none;
-    box-shadow: none;
+    width: 70vw;
   }
+  button.navbar-toggle {
+    height: 12vw;
+  }
+  button.navbar-toggle.collapsed {
+    height: 12vw;
+  }
+  .navbar-brand {
+    width: 20vw;
+    height: 15vw;
+  }
+}
 
+@media (min-width: 768px) {
+  .navbar {
+    height: 0vw;
+  }
+  nav.navbar.navbar-default div.container {
+    width: 100vw;
+  }
+  form.navbar-form {
+    width: 25vw;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+  }
   form.navbar-form button {
-    color: white;
-    opacity: 0;
-    transition: all 2s;
-    background: none;
-    border: none;
+    font-size: 1.1vw;
   }
-
-  #dropdownToggle {
-    background-color: rgb(17, 55, 100);
+  .navbar-brand {
+    width: 7vw;
+    height: 8vw;
+    transform: translateY(-1.5vw);
   }
-
-  ul.dropdown-menu {
-    background-color: rgb(17, 55, 100);
+  .navbar.navbar-default li a {
+    font-size: 1.1vw;
   }
-
-  ul.dropdown-menu li a:hover {
-    background-color: rgb(36, 110, 194);
+  #navBarRightSide {
+    float: none !important;
   }
+}
 
-  @media (min-width: 570px) {
-
-    form.navbar-form {
-      width: 70vw;
-    }
-    button.navbar-toggle {
-      height: 12vw;
-    }
-    button.navbar-toggle.collapsed {
-      height: 12vw;
-    }
-    .navbar-brand {
-      width: 20vw;
-      height: 15vw;
-    }
+@media (min-width: 1000px) {
+  .navbar {
+    height: 90px;
   }
-
-  @media (min-width: 768px) {
-    .navbar {
-      height: 0vw;
-    }
-    nav.navbar.navbar-default div.container {
-      width: 100vw
-    }
-    form.navbar-form {
-      width: 25vw;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 5px
-    }
-    form.navbar-form button {
-      font-size: 1.1vw
-    }
-    .navbar-brand {
-      width: 7vw;
-      height: 8vw;
-      transform: translateY(-1.5vw)
-    }
-    .navbar.navbar-default li a {
-      font-size: 1.1vw
-    }
-    #navBarRightSide {
-      float: none!important
-    }
+  nav.navbar.navbar-default div.container {
+    width: 90vw;
+    padding-top: 1vw;
   }
-
-  @media (min-width: 1000px) {
-    .navbar {
-      height: 90px
-    }
-    nav.navbar.navbar-default div.container {
-      width: 90vw;
-      padding-top: 1vw
-    }
-    .navbar-brand {
-      width: 7vw;
-      height: 10vh;
-    }
-    form.navbar-form {
-      width: 20vw;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 5px
-    }
+  .navbar-brand {
+    width: 7vw;
+    height: 10vh;
   }
-
-  @media (min-width: 1260px) {
-    nav.navbar.navbar-default div.container {
-      width: 95vw;
-    }
-    #navBarRightSide {
-      float: right!important
-    }
+  form.navbar-form {
+    width: 20vw;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
   }
+}
 
-  @media (min-width: 1420px) {
-    nav.navbar.navbar-default div.container {
-      padding-top: 1.25vw
-    }
+@media (min-width: 1260px) {
+  nav.navbar.navbar-default div.container {
+    width: 95vw;
   }
+  #navBarRightSide {
+    float: right !important;
+  }
+}
 
-  @media (min-width: 1580px) {
-    form.navbar-form {
-      padding-top: 2px
-    }
+@media (min-width: 1420px) {
+  nav.navbar.navbar-default div.container {
+    padding-top: 1.25vw;
   }
+}
+
+@media (min-width: 1580px) {
+  form.navbar-form {
+    padding-top: 2px;
+  }
+}

@@ -6,9 +6,9 @@ $("#investmentsBtn").click(function() {
   imgNumber++;
   if (imgNumber === 4) {
     imgNumber = 1;
-  };
+  }
   $("#handShakeImg").attr("src", "/images/handShake" + imgNumber + ".jpg");
-  
+
   for (var i = 1; i <= $("#investmentLastElem .fa.fa-circle").length; i++) {
     if (i === imgNumber) {
       var previousElem;
@@ -20,30 +20,42 @@ $("#investmentsBtn").click(function() {
     }
   }
 });
-$("#newsPart button").click(function(){
+$("#newsPart button").click(function() {
   $(this.nextSibling.nextSibling).fadeOut(0);
-  $(this.nextSibling.nextSibling).text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.")
+  $(this.nextSibling.nextSibling).text(
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+  );
   $(this.nextSibling.nextSibling).fadeIn();
 });
 
-$("#interruptionPart button").click(function(){
-  changedTextAmount === 3 ? changedTextAmount = 3 : changedTextAmount++;
-  $("#interruptionLastElem i:nth-child("+ changedTextAmount +")").addClass("activeCircle");
+$("#interruptionPart button").click(function() {
+  changedTextAmount === 3 ? (changedTextAmount = 3) : changedTextAmount++;
+  $("#interruptionLastElem i:nth-child(" + changedTextAmount + ")").addClass(
+    "activeCircle"
+  );
   $(this.nextSibling.nextSibling).fadeOut(0);
-  $(this.nextSibling.nextSibling).text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.")
+  $(this.nextSibling.nextSibling).text(
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
+  );
   $(this.nextSibling.nextSibling).fadeIn();
 });
 
-$(document).ready(function(){
-  $("#youtubeVid iframe").attr("src", "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0");
-  $("#discoverBtn").click(function(){
+$(document).ready(function() {
+  $("#youtubeVid iframe").attr(
+    "src",
+    "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0"
+  );
+  $("#discoverBtn").click(function() {
     $("#youtubeVid").show();
   });
-  $("#closeVidBtn").click(function(){
+  $("#closeVidBtn").click(function() {
     $("#youtubeVid").hide();
-    $("#youtubeVid iframe").attr("src", "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0");
+    $("#youtubeVid iframe").attr(
+      "src",
+      "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0"
+    );
   });
-  $("#emailForm").submit(function(e){
+  $("#emailForm").submit(function(e) {
     e.preventDefault();
     var name = $("#name").val();
     var email = $("#email").val();
@@ -59,6 +71,8 @@ $(document).ready(function(){
     $("#email").val("");
     $("#subject").val("");
     $("#message").val(" Message");
-    alert("Thank you for your email. We will get back to you as soon as possible")
+    alert(
+      "Thank you for your email. We will get back to you as soon as possible"
+    );
   });
 });
