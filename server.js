@@ -19,7 +19,7 @@ let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
       user: "nplatonovbusiness@gmail.com", 
-      pass: "" // password
+      pass: "Starnet1997564212" // password
   }
 });
 
@@ -112,7 +112,7 @@ app.post("/career/application", upload.single("resume"), function(req, res){
   let mailOptions = {
     from: "Wattz.com",
     to: applicant.email,
-    subject: "Weekly newsletter !",
+    subject: "Job Application",
     html: `<h3>Dear ${pronoun} ${applicant.name},</h3>
           <div>We have received your application and will be reviewing it shortly.</div>
           <div>Please check your email again for a reply within a few days.</div>
