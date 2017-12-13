@@ -53,6 +53,10 @@ app.get("/news", function(req, res){
   res.render("news");
 });
 
+app.get("/faq", function(req, res){
+  res.render("faq");
+});
+
 app.post("/buy", function(req, res){
   var create_payment_json = {
     "intent": "sale",

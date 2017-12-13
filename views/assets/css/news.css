@@ -1,28 +1,28 @@
-.articleImg{
-    height: 100px;
-    width: 110px;
-    border-radius: 50%;
+.articleImg {
+  height: 100px;
+  width: 110px;
+  border-radius: 50%;
 }
-.articleImg:hover{
- filter: blur(2px);
- transition: all 1s;
+.articleImg:hover {
+  filter: blur(2px);
+  transition: all 1s;
 }
-.row{
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: 20px
+.row {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 20px;
 }
-.article span{
-    text-decoration: line-through;
-    padding: 0 15px
+.article span {
+  text-decoration: line-through;
+  padding: 0 15px;
 }
-span.rightSideDescription{
-    text-decoration: none;
-    padding-top: 0
+span.rightSideDescription {
+  text-decoration: none;
+  padding-top: 0;
 }
-.rightSide{
-    float: right;
+.rightSide {
+  float: right;
 }
-.rightSided span{
-    padding-top: 37px
+.rightSided span {
+  padding-top: 37px;
 }
