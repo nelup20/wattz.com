@@ -1,0 +1,24 @@
+.articleImg{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.article{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 20px
+}
+.article span{
+    text-decoration: line-through;
+    padding: 0 15px
+}
+span.rightSideDescription{
+    text-decoration: none;
+    padding-top: 0
+}
+.rightSide{
+    float: right;
+}
+.rightSided span{
+    padding-top: 37px
+}
