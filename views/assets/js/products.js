@@ -1,7 +1,7 @@
 
 
 $("a[data-product='flash'").click(function(){
-    $(this).html("<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>");
+    $(this).html("<i class='fa fa-refresh fa-spin fa-3x fa-fw'></i>");
     $.ajax(
         {
             url: "/buy",
@@ -17,7 +17,7 @@ $("a[data-product='flash'").click(function(){
     );
 });
 $("a[data-product='lumi'").click(function(){
-    $(this).html("<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>");
+    $(this).html("<i class='fa fa-refresh fa-spin fa-3x fa-fw'></i>");
     $.ajax(
         {
             url: "/buy",
@@ -33,7 +33,7 @@ $("a[data-product='lumi'").click(function(){
     );
 });
 $("a[data-product='flashPro'").click(function(){
-    $(this).html("<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>");
+    $(this).html("<i class='fa fa-refresh fa-spin fa-3x fa-fw'></i>");
     $.ajax(
         {
             url: "/buy",

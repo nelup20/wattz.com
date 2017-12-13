@@ -1,11 +1,15 @@
 .articleImg{
     height: 100px;
-    width: 100px;
+    width: 110px;
     border-radius: 50%;
 }
-.article{
-    padding-top: 35px;
-    padding-bottom: 35px;
+.articleImg:hover{
+ filter: blur(2px);
+ transition: all 1s;
+}
+.row{
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-size: 20px
 }
 .article span{
