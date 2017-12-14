@@ -57,6 +57,14 @@ app.get("/faq", function(req, res){
   res.render("faq");
 });
 
+app.get("/ticket/submit", function(req, res){
+  res.render("submitTicket");
+});
+
+app.get("/ticket/status", function(req, res){
+  res.render("statusTicket");
+});
+
 app.post("/buy", function(req, res){
   var create_payment_json = {
     "intent": "sale",
