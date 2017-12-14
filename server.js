@@ -175,6 +175,39 @@ app.post("/newsletter", function(req, res){
   setInterval(sendMail, week);
 });
 
+app.post("/ticket/submit", function(req, res){
+  let id = "#" + (Math.floor((Math.random() * 90000) + 10000)) ; 
+  let ticket = {
+    question: req.body.question,
+    email: req.body.email,
+    name: req.body.name,
+    description: req.body.description,
+    id: id
+  };
+
+  let mailOptions = {
+    from: "Wattz.com",
+    to: ticket.email,
+    subject: "Support ticket: " + ticket.id,
+    html: `<h4>Dear ${ticket.name},</h4>
+          <div>We are very sorry to hear you have this problem.</div>
+          <div>Our staff will answer your questions and fix any problems that you may have as soon as possible.</div>
+          <hr>
+          <h3>THIS IS AN AUTOMATIC MESSAGE, PLEASE DO NOT REPLY TO THIS EMAIL.</h3>`
+  };
+
+  transporter.sendMail(mailOptions, function(err, info){
+    if(err){
+      console.log(err);
+      console.log("SOMETHING WENT WRONG!");
+      res.redirect("/ticket/submit")
+    } else {
+      console.log("SUCCESS!");
+      res.redirect("/ticket/submit/success");
+    }
+  });
+});
+
 app.post("/career/application", upload.single("resume"), function(req, res){
   let applicant = {
     name: req.body.name,
