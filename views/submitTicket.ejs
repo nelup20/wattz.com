@@ -1,8 +1,8 @@
 
  <%- include("partials/navbar") %>
     <link rel="stylesheet" href="/css/submitTicket.css">
-    <div class="container">
-        <h1>Submit a request</h1>
+    <div class="container" id="submitTicketPart">
+        <h1>Submit a ticket</h1>
         <h4>Start by selecting a category</h4>
         <hr>
         <form action="/ticket/submit" method="POST" class="form-group">
@@ -17,15 +17,13 @@
                     <option value="qOther">Other questions.</option>
                 </select>
                 <h3>2. INPUT YOUR EMAIL</h3>
-                <input type="email" class="form-control" name="email" placeholder="john.doe@mail.com" required>
+                <input type="email" class="form-control" name="email" placeholder="ex: john.doe@mail.com" required>
                 <h3>3. INPUT YOUR FULL NAME</h3>
-                <input type="text" name="name" placeholder="John Doe" class="form-control" required>
+                <input type="text" name="name" placeholder="ex: John Doe" class="form-control" required>
                 <h3>4. DESCRIBE YOUR PROBLEM</h3>
-                <textarea name="description" id="description" cols="100" rows="10" required></textarea><br>
+                <textarea name="description" id="description" cols="30" rows="10" required class="form-control"></textarea><br>
                 <input type="submit" class="btn btn-success">
         </form>
     </div>
-    
-    <script src="/js/submitTicket.js"></script>
  <%- include("partials/footer") %>
 

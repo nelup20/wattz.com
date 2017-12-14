@@ -1,0 +1,25 @@
+
+    #submitTicketPart * {
+        color: rgb(92, 92, 92);
+    }
+    #submitTicketPart h4{
+        font-style: italic;
+    }
+    #submitTicketPart h3{
+        font-size: 16px;
+        font-weight: bold
+    }
+    #submitTicketPart input[type="submit"] {
+        color: white;
+    }
+
+
+    @media (min-width: 768px){
+        #submitTicketPart input[type="submit"] {
+            font-size: 20px
+        }
+        #submitTicketPart h3{
+            font-size: 24px;
+            font-weight: normal;
+        }
+    }
