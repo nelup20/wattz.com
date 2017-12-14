@@ -1,29 +1,28 @@
-
- <%- include("partials/navbar") %>
+<%- include("partials/navbar") %>
     <link rel="stylesheet" href="/css/submitTicket.css">
     <div class="container" id="submitTicketPart">
         <h1>Submit a ticket</h1>
         <h4>Start by selecting a category</h4>
         <hr>
         <form action="/ticket/submit" method="POST" class="form-group">
-            
-                <h3>1. CHOOSE A REQUEST TYPE</h3>
-                <select name="question" id="" class="form-control" required>
-                    <option value="qInvoice">I have a question about an invoice.</option>
-                    <option value="qTechnical">I am having technical issues.</option>
-                    <option value="qProducts">I have a question about your products.</option>
-                    <option value="qCurrentPackage">I need to make a change to my current package.</option>
-                    <option value="qCareerApplication">Career application problems.</option>
-                    <option value="qOther">Other questions.</option>
-                </select>
-                <h3>2. INPUT YOUR EMAIL</h3>
-                <input type="email" class="form-control" name="email" placeholder="ex: john.doe@mail.com" required>
-                <h3>3. INPUT YOUR FULL NAME</h3>
-                <input type="text" name="name" placeholder="ex: John Doe" class="form-control" required>
-                <h3>4. DESCRIBE YOUR PROBLEM</h3>
-                <textarea name="description" id="description" cols="30" rows="10" required class="form-control"></textarea><br>
-                <input type="submit" class="btn btn-success">
+
+            <h3>1. CHOOSE A REQUEST TYPE</h3>
+            <select name="question" id="" class="form-control" required>
+                <option value="qInvoice">I have a question about an invoice.</option>
+                <option value="qTechnical">I am having technical issues.</option>
+                <option value="qProducts">I have a question about your products.</option>
+                <option value="qCurrentPackage">I need to make a change to my current package.</option>
+                <option value="qCareerApplication">Career application problems.</option>
+                <option value="qOther">Other questions.</option>
+            </select>
+            <h3>2. INPUT YOUR EMAIL</h3>
+            <input type="email" class="form-control" name="email" placeholder="ex: john.doe@mail.com" required>
+            <h3>3. INPUT YOUR FULL NAME</h3>
+            <input type="text" name="name" placeholder="ex: John Doe" class="form-control" required>
+            <h3>4. DESCRIBE YOUR PROBLEM</h3>
+            <textarea name="description" id="description" cols="30" rows="10" required class="form-control"></textarea>
+            <br>
+            <input type="submit" class="btn btn-success">
         </form>
     </div>
- <%- include("partials/footer") %>
-
+    <%- include("partials/footer") %>
