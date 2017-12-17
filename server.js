@@ -11,13 +11,15 @@ const express = require("express"),
   filesDir = __dirname + "/uploads",
   sensitive = require("./sensitive"),
   paypal = require("paypal-rest-sdk"),
-  cors = require("cors");
+  cors = require("cors"),
+  mongoose = require("mongoose");
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "views/assets")));
 app.use(cors({credentials: true, origin: true}));
+mongoose.connect('mongodb://localhost/Tickets');
 
 let transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -203,7 +205,7 @@ app.post("/ticket/submit", function(req, res){
       res.redirect("/ticket/submit")
     } else {
       console.log("SUCCESS!");
-      res.redirect("/ticket/submit/success");
+      res.render("submitSuccess");
     }
   });
 });
