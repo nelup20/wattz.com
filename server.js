@@ -225,7 +225,7 @@ app.post("/ticket/submit", function(req, res){
       res.redirect("/ticket/submit")
     } else {
       console.log("SUCCESS!");
-      res.render("submitSuccess", {id: id});
+      res.render("submitSuccess", {id: id, name: ticket.name});
     }
   });
 });
