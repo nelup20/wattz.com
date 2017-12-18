@@ -12,7 +12,8 @@ const express = require("express"),
   sensitive = require("./sensitive"),
   paypal = require("paypal-rest-sdk"),
   cors = require("cors"),
-  mongoose = require("mongoose");
+  mongoose = require("mongoose"),
+  request = require("request");
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,6 +44,7 @@ const ticketSchema = mongoose.Schema({
     id: String,
     solved: Boolean
 });
+
 const submittedTicket = mongoose.model("ticket", ticketSchema);
 
 app.get("/", function(req, res) {
@@ -297,6 +299,40 @@ app.post("/career/application", upload.single("resume"), function(req, res){
   });
   res.render("success");
 });
+
+app.post("/search", function(req, res){
+  let query = req.body.search;
+  var results = [];
+
+  function search(url){
+    request(url, function (error, response, html) {
+      if (!error && response.statusCode == 200) {
+       let text = html.split(" ");
+       for(var i = 0; i < text.length; i++){
+         if(query === text[i]){
+          let endresult = [
+            response.request.path,
+            query
+          ];
+          results.push(endresult);
+          break;
+         }
+       }
+      }
+    });
+  }
+  search('http://localhost:3000/');
+  search('http://localhost:3000/about');
+  search('http://localhost:3000/career');
+  search('http://localhost:3000/products');
+  search('http://localhost:3000/news');
+  search('http://localhost:3000/faq');
+  
+  setTimeout(function(){
+    res.render("results", {results: results});
+  }, 3000);
+});
+
 
 app.use(function(req, res){
   res.status(404);
