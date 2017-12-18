@@ -230,6 +230,20 @@ app.post("/ticket/submit", function(req, res){
   });
 });
 
+app.post("/ticket/status", function(req, res){
+  submittedTicket.find({id: req.body.ticketNumber}, function(err, ticket){
+    if(err){
+      console.log(err);
+    } else {
+    if(ticket.length === 0){
+      res.send("None found");
+    } else {
+      res.send(ticket)
+    }
+    }
+  });
+});
+
 app.post("/career/application", upload.single("resume"), function(req, res){
   let applicant = {
     name: req.body.name,

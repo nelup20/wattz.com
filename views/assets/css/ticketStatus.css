@@ -1,0 +1,25 @@
+
+#ticketStatusContainer *{
+    color: rgb(92, 92, 92);
+}
+#ticketStatusContainer button{
+    color: white;
+    margin-bottom: 110px
+}
+#ticketStatusContainer h1{
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+#ticketStatusContainer .form-group{
+    padding: 20px 0
+}
+#loadingIcon{
+    padding: 160px 0
+}
+#wrongNumberWarning{
+    color: white;
+    margin-bottom: 40px;
+}
+#ticketStatus{
+    padding-bottom: 70px
+}
