@@ -35,6 +35,16 @@ paypal.configure({
   'client_secret': sensitive.paypalSecret
 });
 
+const ticketSchema = mongoose.Schema({
+    question: String,
+    email: String,
+    name: String,
+    description: String,
+    id: String,
+    solved: Boolean
+});
+const submittedTicket = mongoose.model("ticket", ticketSchema);
+
 app.get("/", function(req, res) {
   res.render("index");
 });
@@ -184,8 +194,18 @@ app.post("/ticket/submit", function(req, res){
     email: req.body.email,
     name: req.body.name,
     description: req.body.description,
-    id: id
+    id: id,
+    solved: false
   };
+
+  let currentTicket = new submittedTicket(ticket);
+  currentTicket.save(function(err, curTicket){
+    if(err){
+      console.log(err);
+    } else {
+      console.log("SUCCESS ! SAVED TO THE DB")
+    }
+  });
 
   let mailOptions = {
     from: "Wattz.com",
@@ -205,7 +225,7 @@ app.post("/ticket/submit", function(req, res){
       res.redirect("/ticket/submit")
     } else {
       console.log("SUCCESS!");
-      res.render("submitSuccess");
+      res.render("submitSuccess", {id: id});
     }
   });
 });
