@@ -26,7 +26,7 @@ app.use(cors({
   credentials: true,
   origin: true
 }));
-mongoose.connect('mongodb://localhost/Tickets');
+mongoose.connect(sensitive.DBurl);
 
 let transporter = nodemailer.createTransport({
   service: 'gmail',
