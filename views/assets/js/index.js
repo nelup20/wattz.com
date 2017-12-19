@@ -1,6 +1,6 @@
 var imgNumber = 1;
 var changedTextAmount = 0;
-$("#investmentsBtn").click(function() {
+$("#investmentsBtn").click(function () {
   $("#handShakeImg").fadeOut(50);
   $("#handShakeImg").fadeIn(200);
   imgNumber++;
@@ -20,7 +20,7 @@ $("#investmentsBtn").click(function() {
     }
   }
 });
-$("#newsPart button").click(function() {
+$("#newsPart button").click(function () {
   $(this.nextSibling.nextSibling).fadeOut(0);
   $(this.nextSibling.nextSibling).text(
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
@@ -28,7 +28,7 @@ $("#newsPart button").click(function() {
   $(this.nextSibling.nextSibling).fadeIn();
 });
 
-$("#interruptionPart button").click(function() {
+$("#interruptionPart button").click(function () {
   changedTextAmount === 3 ? (changedTextAmount = 3) : changedTextAmount++;
   $("#interruptionLastElem i:nth-child(" + changedTextAmount + ")").addClass(
     "activeCircle"
@@ -40,22 +40,22 @@ $("#interruptionPart button").click(function() {
   $(this.nextSibling.nextSibling).fadeIn();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   $("#youtubeVid iframe").attr(
     "src",
     "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0"
   );
-  $("#discoverBtn").click(function() {
+  $("#discoverBtn").click(function () {
     $("#youtubeVid").show();
   });
-  $("#closeVidBtn").click(function() {
+  $("#closeVidBtn").click(function () {
     $("#youtubeVid").hide();
     $("#youtubeVid iframe").attr(
       "src",
       "https://www.youtube.com/embed/_NeJ3Kg6OUo?rel=0&amp;controls=0&amp;showinfo=0"
     );
   });
-  $("#emailForm").submit(function(e) {
+  $("#emailForm").submit(function (e) {
     e.preventDefault();
     var name = $("#name").val();
     var email = $("#email").val();

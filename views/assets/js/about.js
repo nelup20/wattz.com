@@ -3,7 +3,7 @@ var title = $("#aboutWattz h3")
   .split("");
 var charNumber = 0;
 var textCharNumber = 0;
-$(document).ready(function() {
+$(document).ready(function () {
   if (window.innerWidth < 768) {
     $("#whoAreWe h2").css({
       "padding-top": "150px",
@@ -23,13 +23,13 @@ $(document).ready(function() {
       transition: "all 1s"
     });
   }
-  setTimeout(function() {
+  setTimeout(function () {
     var wholeTitle = "";
     $("#aboutWattz i.fa.fa-spinner.fa-pulse.fa-3x.fa-fw").fadeOut(100);
     $("#aboutWattz h3")
       .text("")
       .fadeIn(700);
-    var interval = setInterval(function() {
+    var interval = setInterval(function () {
       wholeTitle += title[charNumber];
       $("#aboutWattz h3").text(wholeTitle);
       if (charNumber < title.length - 1) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
         charNumber = 0;
       }
     }, 400);
-    (function() {
+    (function () {
       var wholeText = "";
       var text = $("#aboutWattz :nth-child(3)")
         .text()
@@ -47,7 +47,7 @@ $(document).ready(function() {
       $("#aboutWattz :nth-child(3)")
         .text("")
         .fadeIn(700);
-      var textInterval1 = setInterval(function() {
+      var textInterval1 = setInterval(function () {
         wholeText += text[textCharNumber];
         $("#aboutWattz :nth-child(3)").text(wholeText);
         if (textCharNumber < text.length - 1) {
@@ -62,7 +62,7 @@ $(document).ready(function() {
           $("#aboutWattz :nth-child(4)")
             .text("")
             .fadeIn();
-          var textInterval2 = setInterval(function() {
+          var textInterval2 = setInterval(function () {
             wholeText += text[textCharNumber];
             $("#aboutWattz :nth-child(4)").text(wholeText);
             if (textCharNumber < text.length - 1) {
@@ -77,7 +77,7 @@ $(document).ready(function() {
               $("#aboutWattz :nth-child(5)")
                 .text("")
                 .fadeIn();
-              var textInterval3 = setInterval(function() {
+              var textInterval3 = setInterval(function () {
                 wholeText += text[textCharNumber];
                 $("#aboutWattz :nth-child(5)").text(wholeText);
                 if (textCharNumber < text.length - 1) {

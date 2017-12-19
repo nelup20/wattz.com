@@ -1,5 +1,5 @@
 var toggled = false;
-$(".glyphicon.glyphicon-search").click(function() {
+$(".glyphicon.glyphicon-search").click(function () {
   toggled = !toggled;
   if (toggled) {
     $("#searchInput").css({

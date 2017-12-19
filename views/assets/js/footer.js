@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $("#newsletterForm").submit(function(e) {
+$(document).ready(function () {
+  $("#newsletterForm").submit(function (e) {
     e.preventDefault();
     var email = $("#newsletterEmail").val();
     $.post("/newsletter", {

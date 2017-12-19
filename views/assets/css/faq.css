@@ -1,27 +1,35 @@
 #faqPart h2 {
   text-align: center;
 }
+
 #faqPart .row h3 {
   font-size: 18px;
 }
+
 #faqPart .row {
   padding: 18px 0;
 }
+
 #faqPart div.row ul li {
   font-size: 12px;
 }
+
 #faqPart div.row ol li {
   font-size: 12px;
 }
+
 #faqPart div.row div {
   font-size: 12px;
 }
+
 #faqPart * {
   color: #464545;
 }
+
 #faqPart hr {
   border-color: rgb(204, 204, 204);
 }
+
 #faqNavigation li {
   color: rgb(31, 31, 153);
 }
@@ -30,6 +38,7 @@
   color: rgb(31, 31, 153);
   font-weight: bold;
 }
+
 @media (min-width: 768px) {
   #faqPart .row {
     padding: 20px 0;
@@ -47,6 +56,7 @@
     font-size: 21px;
   }
 }
+
 @media (min-width: 992px) {
   #faqPart .row {
     padding: 20px 0;

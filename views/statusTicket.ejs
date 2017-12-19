@@ -1,20 +1,16 @@
+<%- include("partials/navbar") %>
+    <link rel="stylesheet" href="/css/ticketStatus.css">
 
-
- <%- include("partials/navbar") %>
- <link rel="stylesheet" href="/css/ticketStatus.css">
-
-     <div class="container" id="ticketStatusContainer">
-         <h1>Ticket Status</h1>
-         <form action="/ticket/status" method="POST">
+    <div class="container" id="ticketStatusContainer">
+        <h1>Ticket Status</h1>
+        <form action="/ticket/status" method="POST">
             <div class="form-group">
                 <label for="ticketNumber">Input your ticket number:</label>
                 <input type="text" class="form-control" placeholder="Ex: #45091" name="ticketNumber">
             </div>
-        <button class="btn btn-success">Search</button>
+            <button class="btn btn-success">Search</button>
         </form>
-     </div>
- 
-     <script src="/js/ticketStatus.js"></script>
-  <%- include("partials/footer") %>
- 
- 
+    </div>
+
+    <script src="/js/ticketStatus.js"></script>
+    <%- include("partials/footer") %>

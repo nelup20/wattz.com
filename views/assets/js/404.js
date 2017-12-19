@@ -1,6 +1,6 @@
 var timer = 5;
-$(document).ready(function() {
-  setInterval(function() {
+$(document).ready(function () {
+  setInterval(function () {
     timer--;
     $("#Text404 .container span").text(timer + "...");
     if (timer === 0) {

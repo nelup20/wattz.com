@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $(".container h2,h3,#envelopeDiv").fadeIn(900);
   var open = false;
-  setInterval(function() {
+  setInterval(function () {
     open = !open;
     if (!open) {
       $("#envelopeDiv i")
