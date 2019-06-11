@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var date = new Date();
   date = date.toLocaleDateString();
   date = date.split("/");

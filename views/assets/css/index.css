@@ -5,68 +5,84 @@
   color: white;
   padding-top: 50vw;
 }
+
 .indexBulbs h2 {
   margin: 0 auto;
   text-align: center;
   font-weight: 300;
 }
+
 .indexBulbs h3 {
   margin: 3vw auto;
   text-align: center;
 }
+
 #aboutWattz {
   color: rgb(97, 97, 97);
   background-color: white;
 }
+
 #aboutWattz div {
   margin-top: 10vw;
   margin-bottom: 10vw;
 }
+
 #aboutWattz button {
   background-color: rgb(17, 55, 100);
   color: white;
   margin-bottom: 5vw;
 }
+
 #ourInvestments {
   background-color: rgba(206, 204, 204, 0.192);
   color: rgb(97, 97, 97);
 }
+
 #ourInvestmentsRow {
   margin-top: 10vw;
 }
+
 #ourInvestmentsPart div {
   margin-top: 10vw;
   margin-bottom: 0;
 }
+
 #investmentLastElem {
   text-align: center;
   color: rgba(206, 204, 204, 0.466);
   margin-top: 0vw;
   padding-bottom: 3vw;
 }
+
 #investmentLastElem i {
   margin-left: 3vw;
 }
+
 #ourInvestments button {
   background-color: rgb(17, 55, 100);
   color: white;
   margin-top: 10vw;
   margin-bottom: 0vw;
 }
+
 #handShakeImg {
   padding: initial;
   margin-bottom: 7vw;
 }
+
 #ourInvestmentsPart {
   background-color: white;
 }
+
 #emailPart {
   background-color: rgb(17, 55, 100);
   padding-top: 5vw;
 }
+
 #emailPart .container {
   width: 91vw;
 }
+
 input.col-xs-12.col-md-4 {
   background: none;
   margin-bottom: 4vw;
@@ -75,45 +91,53 @@ input.col-xs-12.col-md-4 {
   padding-left: 7vw;
   color: white;
 }
+
 ::-webkit-input-placeholder {
   /* (Safari, Google Chrome, Opera 15+) and Microsoft Edge */
   color: white;
 }
+
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: white;
 }
+
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: white;
 }
+
 :-ms-input-placeholder {
   /* Internet Explorer 10 and 11 */
   color: white;
 }
+
 ::placeholder {
   /* April 2017: Most modern browsers support */
   color: white;
 }
+
 textarea.col-xs-12.col-md-12 {
   background: none;
   border: 1px solid white;
   padding: 2.5vw;
   padding-left: 6vw;
-
   color: white;
 }
+
 span.glyphicon.glyphicon-bell {
   color: white;
   font-size: 7vw;
   margin-left: 8vw;
 }
+
 .emailReason {
   color: white;
   text-align: center;
   font-size: 3vw;
   margin-bottom: 4vw;
 }
+
 #sendBtn {
   color: rgb(17, 55, 100);
   background-color: white;
@@ -123,61 +147,76 @@ span.glyphicon.glyphicon-bell {
   text-align: center;
   border-radius: 1.3vw;
 }
+
 #newsAndInterruptions {
   background-color: rgba(206, 204, 204, 0.473);
 }
+
 #newsAndInterruptions div.row {
   background-color: rgba(206, 204, 204, 0.192);
 }
+
 #newsPart {
   background-color: white;
 }
+
 #newsPart span.text {
   font-size: 3vw;
   padding-left: 4vw;
 }
+
 #newsPart button.btn.btn-default {
   background-color: rgb(17, 55, 100);
   color: white;
   font-size: 3vw;
 }
+
 #newsPart div {
   border-top: 1px solid rgba(0, 0, 0, 0.185);
   padding-top: 3vw;
   padding-bottom: 3vw;
 }
+
 #newsLastElem {
   text-align: center;
   font-weight: bold;
 }
+
 #interruptionPart {
   background-color: white;
   margin-top: 10vw;
 }
+
 #interruptionPart span.text {
   font-size: 3vw;
   padding-left: 4vw;
 }
+
 #interruptionPart button.btn.btn-default {
   background-color: rgb(17, 55, 100);
   color: white;
   font-size: 3vw;
 }
+
 #interruptionPart div {
   border-top: 1px solid rgba(0, 0, 0, 0.185);
   padding-top: 3vw;
   padding-bottom: 3vw;
 }
+
 #interruptionLastElem {
   text-align: center;
   color: rgba(206, 204, 204, 0.466);
 }
+
 #interruptionLastElem i {
   margin-left: 3vw;
 }
+
 .activeCircle {
   color: rgb(17, 55, 100);
 }
+
 #feelEnergyPart {
   color: white;
   background-color: #c23833;
@@ -185,14 +224,17 @@ span.glyphicon.glyphicon-bell {
   padding: 6vw;
   font-family: "Pacifico", cursive;
 }
+
 #feelEnergyPart h3 {
   margin-top: 0;
 }
+
 iframe {
   width: 100vw;
   height: 100vw;
   border: none;
 }
+
 #youtubeVid {
   display: none;
   position: fixed;
@@ -206,6 +248,7 @@ iframe {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1;
 }
+
 #youtubeVid iframe {
   width: 80%;
   max-width: 1200px;
@@ -216,6 +259,7 @@ iframe {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
+
 #youtubeVid i.fa.fa-times {
   position: absolute;
   top: 15px;
@@ -225,11 +269,13 @@ iframe {
   font-weight: bold;
   transition: 0.3s;
 }
+
 #youtubeVid i.fa.fa-times:hover {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
+
 @-webkit-keyframes zoom {
   from {
     -webkit-transform: scale(0);
@@ -247,11 +293,13 @@ iframe {
     transform: scale(1);
   }
 }
+
 @media (min-width: 630px) {
   span.glyphicon.glyphicon-bell {
     margin-left: 9.1vw;
   }
 }
+
 @media (min-width: 750px) {
   .indexBulbs {
     height: 100vw;
@@ -286,7 +334,6 @@ iframe {
   #interruptionPart button.btn.btn-default {
     font-size: 2vw;
   }
-
   #ourInvestmentsRow {
     margin-top: 7vw;
   }
@@ -298,6 +345,7 @@ iframe {
     height: 650px;
   }
 }
+
 @media (min-width: 992px) {
   #youtubeVid i.fa.fa-times {
     font-size: 40px;
@@ -352,6 +400,7 @@ iframe {
     padding: 30px;
   }
 }
+
 @media (min-width: 1180px) {
   .indexBulbs h2 {
     font-size: 4vw;
@@ -360,6 +409,7 @@ iframe {
     font-size: 2.5vw;
   }
 }
+
 @media (min-width: 1200px) {
   .indexBulbs {
     height: 1000px;

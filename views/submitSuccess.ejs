@@ -1,23 +1,28 @@
-
-    <%- include("partials/navbar") %>
+<%- include("partials/navbar") %>
     <style>
-    #ticketSuccessContainer h1,h2{
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: rgb(92, 92, 92);
-    }
-    #ticketSuccessContainer div{
-        padding: 70px 0;
-        color: rgb(92, 92, 92);
-    }
+        #ticketSuccessContainer h1,
+        h2 {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: rgb(92, 92, 92);
+        }
+
+        #ticketSuccessContainer div {
+            padding: 70px 0;
+            color: rgb(92, 92, 92);
+        }
     </style>
 
     <div class="container" id="ticketSuccessContainer">
         <h1>Ticket submission successful !</h1>
-        <h2>Your ticket number is: <%= id %> </h2>
+        <h2>Your ticket number is:
+            <%= id %>
+        </h2>
         <div>
-            <h3>Hello <%= name %> </h3>
+            <h3>Hello
+                <%= name %>
+            </h3>
             <h3>We are sorry to hear you are having issues.</h3>
             <h3>We will contact you via email to solve your problem as soon as possible.</h3>
         </div>
